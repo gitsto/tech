@@ -13,7 +13,7 @@ expand one unused Datacenter of a platform (check with your colleagues), and rem
 according to the doc
 modify:
 
-- [?] `ipc-deploy_cao_virtualization-XXXXXXXX\roles\create-vm\defaults\main.yml`
+- [ ] `ipc-deploy_cao_virtualization-XXXXXXXX\roles\create-vm\defaults\main.yml`
 - [x] setup_hypervisor.yml
 - [x] setup_vms.yaml
 
