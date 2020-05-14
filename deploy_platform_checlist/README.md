@@ -23,7 +23,7 @@ then start
 
 ## reinstall new platform K8s-cluster
 
-Go to esxi ui: <https://172.17.1.99/ui/#/host/vms> (cao4 example)
+Go to esxi ui: <https://192.168.81.74/ui/#/login> (cao4 example)
 
 - stop one by one the VMs: master, worker 1 & 2
 - restore snapshot
