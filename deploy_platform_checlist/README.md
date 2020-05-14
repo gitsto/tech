@@ -13,7 +13,7 @@ expand one unused Datacenter of a platform (check with your colleagues), and rem
 according to the doc
 modify:
 
-- [ ] `ipc-deploy_cao_virtualization-XXXXXXXX\roles\create-vm\defaults\main.yml`
+- [x] `ipc-deploy_cao_virtualization-XXXXXXXX\roles\create-vm\defaults\main.yml`
 - [x] setup_hypervisor.yml
 - [x] setup_vms.yaml
 
@@ -21,7 +21,7 @@ then start
 >ansible-playbook setup_hypervisor.yml
 >ansible-playbook setup_vms.yaml
 
-## reinstall new platform K8s-cluster
+## K8s-cluster playbooks
 
 Go to esxi ui: <https://192.168.81.74/ui/#/login> (cao4 example)
 
@@ -32,7 +32,7 @@ Go to esxi ui: <https://192.168.81.74/ui/#/login> (cao4 example)
 then prepare your playbooks with correct conf files
 
 - [x] hosts.ini
-- [ ] all_variables.yml
+- [x] all_variables.yml
 
 after customization, you can save files for next time.
 
