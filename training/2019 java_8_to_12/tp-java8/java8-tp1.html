@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[TP]</title>
+    <meta name="description" content="Dans Eclipse, créer un nouveau projet formation-java de type Maven Project.Ajouter les propriétés suivantes :  &lt;properties&gt;    &lt;maven.compiler.sourc...">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="canonical" href="./java8-tp1.html">
+    <link rel="alternate" type="application/rss+xml" title="Leuville Objects Formation" href="./feed.xml" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <a href="./index.html" class="masthead-logo">
+      <span class="mega-octicon octicon-package"></span>
+      Leuville Objects Formation
+    </a>
+
+  </div>
+</header>
+
+
+<div class="container">
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">[TP]</h1>
+    <hr>
+  </header>
+
+  <article class="post-content">
+    <p>Dans Eclipse, créer un nouveau projet <strong>formation-java</strong> de type <strong><em>Maven Project</em></strong>.</p>
+
+<p>Ajouter les propriétés suivantes :</p>
+
+<pre><code class="language-xml">  &lt;properties&gt;
+    &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;
+</code></pre>
+
+<h1 id="exercice-1--les-nouveauts">Exercice 1 : les nouveautés</h1>
+
+<h2 id="etape-1">Etape 1</h2>
+
+<p>Construire une classe <code>Etape1</code> avec des lambda expressions :</p>
+
+<ul>
+  <li>un attribut de type <code>Runnable</code> pour faire un affichage « Exercice1.Etape1 », cette définition est faite sous la forme d’une lambda expression,</li>
+  <li>une méthode <code>main</code> pour faire les tests et appeler cette lambda expression,</li>
+  <li>ajouter à la méthode <code>main</code> une variable <code>strString</code> qui est un tableau de <code>String</code> initialisée avec les prénoms des stagiaires de la salle. Ensuite, il est demandé de trier les éléments de ce tableau à l’aide de la classe <code>Arrays</code> et de sa méthode <code>sort</code>. Le second paramètre est un objet qui implémente l’interface <code>Comparable&lt;E&gt;</code>. Ce second paramètre est à fournir sous la forme d’une lambda expression énonçant le tri.</li>
+</ul>
+
+<h2 id="etape-2">Etape 2</h2>
+
+<p>Construire une classe <code>Etape2</code> avec des références à des méthodes :</p>
+
+<ul>
+  <li>une méthode static <code>doWork</code> qui permet d’afficher le nom du thread courant et attend une poignée de secondes avant de boucler 50 fois,</li>
+  <li>une méthode main pour faire les points suivants :
+    <ul>
+      <li>créer un thread dont la méthode exécutée est <code>doWork</code>, le démarrer,</li>
+      <li>créer un thread dont la méthode exécutée est donnée sous la forme d’une lambda expression qui appelle <code>doWork</code>, le démarrer,</li>
+      <li>créer un thread de manière traditionnelle avec une classe anonyme implémentant <code>Runnable</code> dont la méthode <code>run</code> appelle <code>doWork</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="etape-3">Etape 3</h2>
+
+<p>Construire une classe Etape3 qui utilise une interface fonctionnelle :</p>
+
+<ul>
+  <li>définir une interface fonctionnelle nommée <code>Formatter</code>, avec une obligation de codage nommée <code>format</code> qui prend en entrée une chaîne de caractères qui décrit un format et un nombre variable d’Object paramètres et qui retourne une chaîne de caractères,</li>
+  <li>une méthode static nommée <code>forEach</code>, dont le but est d’afficher les éléments de la liste en utilisant le formatteur, ayant deux paramètres :
+    <ul>
+      <li>une liste de chaînes de caractères</li>
+      <li>un formatter</li>
+    </ul>
+  </li>
+  <li>une méthode <code>main</code> pour faire les points suivants :
+    <ul>
+      <li>créer une liste de chaînes de caractères,</li>
+      <li>appeler la méthode static <code>forEach</code> 2 fois avec la liste. La 1 ère invocation utilisera une référence à la méthode <code>String::format</code>. La 2 ème invocation utilisera une lambda expression équivalente dont le corps invoque la méthode <code>format</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="etape-4">Etape 4</h2>
+
+<p>Construire une classe Etape4 qui utilise une interface ayant des méthodes par défaut :</p>
+
+<p><img src="./assets/exo1-etape4.jpg" alt="Diagram" /></p>
+
+<ul>
+  <li>définir une interface <code>Defaultable</code> qui contient une méthode <code>notRequired</code> ayant une implémentation par défaut. Sa signature est telle qu’elle ne prend pas de paramètre en entrée et retourne une chaîne de caractères. Celle-ci sera la chaîne de votre choix.</li>
+  <li>créer une classe <code>DefaultableImpl</code> qui implémente l’interface précédente mais ne contient aucune méthode,</li>
+  <li>faire une classe <code>OverridableImpl</code> qui implémente l’interface précédente mais redéfinit la méthode nommée <code>notRequired</code>,</li>
+  <li>créer une interface <code>DefaultableFactory</code> ayant une méthode static nommée <code>create</code> qui à partir d’un <code>Supplier</code> retourne un objet de classe <code>Defaultable</code>.</li>
+  <li>une méthode <code>main</code> pour faire les points suivants :
+    <ul>
+      <li>appeler la méthode <code>create</code> avec en paramètre une référence au new de la classe <code>DefaultableImpl</code>, pour avoir un objet respectant l’interface <code>Defaultable</code>,</li>
+      <li>afficher le résultat de l’appel de la méthode <code>notRequired</code> sur cet objet,</li>
+      <li>appeler la méthode <code>create</code> avec en paramètre une référence au new de la classe <code>OverridableImpl</code>, pour avoir un objet respectant l’interface <code>Defaultable</code>,</li>
+      <li>afficher le résultat de l’appel de la méthode <code>notRequired</code>()` sur cet objet.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="exercice-2--utilisation-des-expressions-lambda">Exercice 2 : Utilisation des expressions lambda</h1>
+
+<p><strong>Rappel</strong> : la méthode <code>compare</code> de l’interface <code>Comparator</code> doit retourner une valeur négative si la 1 ère entrée est plus petite que la 2 ème entrée et ainsi de suite. Elle retourne une valeur positive si la 1 ère entrée est plus grande que la 2 ème . Elle retourne 0 si les deux entrées sont égales.</p>
+
+<p><strong>Rappel</strong> : pour afficher un tableau, il n’est pas possible de le passer en paramètre directement à la méthode println de <code>PrintStream</code>. Aussi, il est conseillé de procéder à une transformation <code>System.out.println(Arrays.asList(tableau))</code> ; chaque élément du tableau sera séparé des autres par une virgule. De plus, c’est plus simple à écrire que de faire une boucle sur tous les éléments du tableau.</p>
+
+<h2 id="etape-1--niveau-de-base">Etape 1 : niveau de base</h2>
+
+<p>Construire une classe Etape1 comprenant une méthode main où un tableau de String d’au moins 5 chaînes de caractères est créé et trié de plusieurs façons :</p>
+
+<ul>
+  <li>Par longueur du plus petit au plus grand : utiliser la méthode length(),</li>
+  <li>Par la propriété inverse (du plus grand au plus petit),</li>
+  <li>Par ordre alphabétique sur le premier caractère (<code>charAt(0)</code> retourne le code numérique du 1 er caractère),</li>
+  <li>Les chaînes de caractères qui contiennent un ‘e’ en premier, les autres en second.</li>
+  <li>Dans ce dernier cas une seconde solution peut être fournie qui utilise une classe technique supplémentaire <code>StringUtils</code> qui possède une méthode static <code>eChecker</code> avec 2 paramètres qui applique ce critère de tri. Une référence à cette méthode est ensuite utilisée.</li>
+</ul>
+
+<h2 id="etape-2--utilisation-de-lambda-expressions-dans-des-interfaces">Etape 2 : utilisation de lambda expressions dans des interfaces</h2>
+
+<p>Le but est de faire une méthode static appelée betterString dans la classe StringUtils qui prend 2 chaînes de caractères et une lambda expression qui désigne laquelle des deux est la meilleure sur un critère comme :</p>
+
+<ul>
+  <li>La plus grande des deux en longueur,</li>
+  <li>La première dans l’ordre alphabétique.</li>
+</ul>
+
+<p>Pour effectuer ce travail, il est demandé de définir une interface fonctionnelle <code>TwoStringPredicate</code> qui possède une obligation de codage nommée <code>isBetter</code> qui prend 2 <code>String</code> et retourne <code>true</code> ou <code>false</code>. Cette interface est utilisée dans la déclaration de la méthode <code>betterString</code> pour typer la lambda expression.</p>
+
+<h2 id="etape-3--utilisation-de-lambda-expressions-dans-des-interfaces-gnriques">Etape 3 : utilisation de lambda expressions dans des interfaces génériques</h2>
+
+<p>Utiliser des interfaces génériques permet de remplacer plusieurs interfaces non génériques où des lambda expressions sont utilisées. Ainsi, il est demandé de remplacer la méthode <code>betterString</code> par une méthode <code>betterEntry</code>. Pour ce faire, il faut en premier définir une nouvelle interface générique <code>TwoElementPredicate</code> contenant une obligation de codage nommée <code>isBetter</code> qui est une méthode générique. Ensuite, il est demandé de construire une classe <code>ElementUtils</code> qui possède une méthode static générique à 3 paramètres nommée <code>betterEntry</code> :</p>
+
+<ul>
+  <li>2 paramètres du type de généricité,</li>
+  <li>Une lambda expression typée par l’interface fonctionnelle <code>TwoElementPredicate</code>.</li>
+</ul>
+
+<p>Enfin, il faut construire une classe <code>Etape3</code> basé sur la classe <code>Etape2</code> mais utilisant la méthode <code>betterEntry</code>.</p>
+
+<p>Maintenant, vous pouvez comparer le prix de deux voitures. Pour cela, il est demandé de définir une classe <code>Car</code> avec 2 attributs : <code>name</code> et <code>price</code> et ajouter une ligne à votre classe <code>Etape3</code> pour comparer deux objet de classe <code>Car</code>.</p>
+
+<h1 id="exercice-3---utilisation-des-streams">Exercice 3 :  Utilisation des streams</h1>
+
+<p>Toutes les étapes de cet exercice sont basées une liste de chaîne de caractères de la forme :</p>
+
+<pre><code class="language-java">List&lt;String&gt; firstnames = Arrays.asList("Lisa", "Bart", "Maggie", "Marge", "Homer", "Apu", "Mandula");
+</code></pre>
+
+<ul>
+  <li>Produire une seule chaîne qui est le résultat de la concaténation des versions majuscules de toutes les chaînes. Utilisez une seule opération de réduction, sans utiliser de map,</li>
+  <li>Produire la même chaîne que ci-dessus, mais cette fois par une opération de map qui transforme les mots en majuscules, suivie d’une opération de réduction qui les enchaîne.</li>
+  <li>Produire une chaîne qui est tous les mots enchaînés ensemble, mais avec des virgules entre  les deux. Notez qu’il n’y a pas de virgule au début, avant le 1 er prénom, et pas de virgule à la fin, après le dernier prénom. Indice majeur: il existe deux versions de réduction: l’une avec une valeur de départ, et l’autre sans une valeur de démarrage.</li>
+  <li>Faites une méthode statique dans une classe <code>StreamUtils</code> qui produit une liste d’une longueur spécifiée par nombres aléatoires.</li>
+</ul>
+
+<h1 id="exercice-4--wordcount-le-hello-world-du-mapreduce">Exercice 4 : WordCount, le Hello World du MapReduce</h1>
+
+<p>Dans cet exercice, le but est de réaliser un programme permettant de compter le nombre d’occurrences de chaque mot d’un texte en utilisant un algorithme MapReduce.</p>
+
+<p>Le fichier à analyser est <a href="./assets/sherlock.txt">ici</a> .</p>
+
+<h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
+
+<p>Enlever les mots les plus courants dans le comptage à l’aide du fichier <code>stop-words-en.json</code> (disponible <a href="./assets/stop-words-en.json">ici</a>)</p>
+
+<p>Utiliser la dépendance suivante pour manipuler du <em>JSON</em></p>
+
+<pre><code class="language-xml">  &lt;dependency&gt;
+      &lt;groupId&gt;org.json&lt;/groupId&gt;
+      &lt;artifactId&gt;json&lt;/artifactId&gt;
+      &lt;version&gt;20160810&lt;/version&gt;
+  &lt;/dependency&gt;
+</code></pre>
+
+<p>Exemple</p>
+
+<pre><code class="language-java">JSONArray a = new JSONArray("["toto", "titi", "tata"]");
+List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+a.forEach(o -&gt; list.add(((String)o)));
+</code></pre>
+
+
+  </article>
+
+</div>
+
+
+<footer class="site-footer">
+  <h2 class="footer-heading">Leuville Objects Formation</h2>
+  <div class="footer-col-wrapper">
+    <div class="footer-col footer-col-1">
+      <ul class="contact-list">
+        <li>Copyright Leuville 2019</li>
+        <li>
+          <a href="mailto:formation@leuville.com">formation@leuville.com</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>

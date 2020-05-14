@@ -1,0 +1,47 @@
+<script>
+    /** Code Hoisting
+     * 
+     * 1. Parsing
+     * 
+     * remonte les déclaration UNIQUMENT de variables
+     * remonte ensuite les ligne declaratives de fonctions
+     * 
+     * 2. Execution
+     * Resoudre les scope
+     */
+
+/*
+console.log(1 ,msg);  //undefined ou error
+
+foo(); //error
+
+var msg = 'hello world';
+
+function foo(){
+    msg += '!';
+    msgbis = msg ;
+    console.log(2 ,msg);
+}
+
+console.log(3 ,msgbis);
+
+*/
+
+var msg;
+function foo(){
+    msg += '!';
+    msgbis = msg ; //💩
+    console.log(2 ,msg);
+}
+
+console.log(1 ,msg);  
+
+foo(); 
+
+msg = 'hello world';
+
+console.log(3 ,msgbis);
+
+
+
+</script>

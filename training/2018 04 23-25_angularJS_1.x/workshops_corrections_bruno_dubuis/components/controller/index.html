@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Receipes</title>
+</head>
+
+<body ng-app="main">
+
+    <div ng-controller="AppController">
+        {{value}}
+        <button ng-click=" value = value + 10 ">+</button>
+    </div>
+    <hr>
+    <div ng-controller="AppController">
+        {{value}}
+        <button ng-click=" value = value + 10 ">+</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

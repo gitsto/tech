@@ -1,0 +1,14 @@
+version: '2'
+services:
+    spk-jekyll:
+        container_name: spk-jekyll
+        image: jekyll/jekyll:2.5.3
+        volumes:
+            - .:/srv/jekyll
+    spk-nginx:
+        container_name: spk-nginx
+        image: nginx
+        volumes:
+            - ./_site:/usr/share/nginx/html
+        ports:
+            - 80:80
