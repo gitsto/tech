@@ -1,0 +1,21 @@
+
+cosaApp = {
+
+    "Apps": [
+        {
+            "Name": "mysql-server",
+            "Chart": "mysql-1.1.1",
+            "AppVersion": "8",
+        },
+        {
+            "Name": "nagios",
+            "Chart": "nagios-1.0.0",
+            "AppVersion": "1.0",
+        },
+        {
+            "Name": "prometheus",
+            "Chart": "prometheus-operator-5.12.4",
+            "AppVersion": "0.30.1"
+        }
+    ]
+   }

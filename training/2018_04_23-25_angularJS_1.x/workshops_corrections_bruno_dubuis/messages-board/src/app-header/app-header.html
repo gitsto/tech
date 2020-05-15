@@ -1,0 +1,54 @@
+<div class="page-header" ng-controller="HeaderController">
+    <h2>Welcome
+        <br>
+        <small>Message Board</small>
+    </h2>
+
+    <div class="row">
+        <div class="col-xs-5 col-xs-offset-7">
+            <form name="userForm" ng-if="showForm()">
+
+                <style>
+                input#login.ng-invalid.ng-dirty{
+                    background: red;
+                }
+                </style>
+              <!--   <pre>{{userForm.login.$error | json }}</pre> -->
+                
+            
+                
+                <div class="input-group">
+                    <input type="text" 
+                    id="login"
+                    name="login"
+                    class="form-control" 
+                    placeholder="You Email" 
+                    common-email-validator
+                    ng-model="user.email" required>
+                    <!-- ng-pattern="/^\w+@orsys\.fr$/" -->
+                    
+                    <span class="input-group-btn">
+                        <button type="button" 
+                        class="btn btn-default"
+                        ng-disabled="userForm.$invalid"
+                        ng-click="login()">Login</button>
+                    </span>
+                </div>
+
+                <div class="alert alert-info" ng-show="userForm.login.$error.atOrsys">
+                    <strong>Attention : </strong> only @orsys.fr email are allowed.
+                 </div>
+
+            </form>
+
+            <div ng-if="!showForm()">
+                <button type="button" 
+                class="btn btn-danger"
+                ng-click="logout()">Logout</button>
+            </div>
+        
+
+        </div>
+    </div>
+
+</div>

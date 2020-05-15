@@ -1,0 +1,7 @@
+com\occonseils\mocking\TestMockCouchePersistance.class
+com\occonseils\mocking\TestStubCouchePersistance.class
+com\occonseils\examen\EvaluateurNiveauTest.class
+com\occonseils\examen\EvaluateurNiveauParametresTest.class
+com\occonseils\mocking\CouchePersistance.class
+com\occonseils\examen\EvaluateurNiveauJunit5Test.class
+com\occonseils\mocking\CoucheMetier.class

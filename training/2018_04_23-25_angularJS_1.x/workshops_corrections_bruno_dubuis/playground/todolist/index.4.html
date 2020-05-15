@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todolist</title>
+</head>
+
+<body ng-app 
+ ng-init="tasks = [{text:'A',complete:false},{text:'B',complete:true}]">
+
+    <form>
+        <input type="text" placeholder="Add Something..." ng-model="userInput">
+        <button 
+            ng-click="tasks.push({text:userInput,complete:false})"
+            ng-disabled=" !userInput "
+            >Add</button>
+    </form>
+
+    <hr>
+
+    <ul>
+        <pre><code>
+            {{tasks | json}}
+        </code></pre>
+        <li ng-repeat="t in tasks track by $index">
+            <span>{{t.text}}</span>
+            <input type="checkbox" ng-checked="t.complete" ng-model="t.complete">
+            <button ng-click=" tasks.splice($index,1) ">X</button>
+        </li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</body>
+
+</html>

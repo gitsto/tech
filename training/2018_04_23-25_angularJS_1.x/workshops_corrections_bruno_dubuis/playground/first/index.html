@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <style>
+/*   .ng-binding{
+      border: 2px solid blue;
+  }
+
+  .ng-scope{
+      border: 2px solid red;
+      padding:5px;
+  } */
+  </style>  
+</head>
+<body>
+
+    {{1+1}}<!-- Binding de valeur -->
+    
+    <h1>Todolist</h1>
+
+    <hr>
+
+    <input type="text" id="name" ng-model="search">
+    <br>
+    <span ng-show="search">{{search}} <button ng-click="search = '' ">Clear</button> </span>
+    
+    <div class="main" ng-init=" names = ['No Types','Scaffolding','Document','Emmet'] ">
+        <ul>
+            <li ng-repeat="n in names | filter : search">
+                {{n}} <br><code ng-click="open = !open">More {{open}}</code>
+                <div ng-if="open">
+                    Please refer to  <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">JavaScript Documentation</a>   
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+
+        setTimeout(function(){
+            angular.bootstrap(document.body,[]);
+        },3000);
+
+    </script>
+</body>
+</html>

@@ -42,6 +42,8 @@ then install
 
 >ansible-playbook -i inventory/**cao4**/hosts.ini --flush-cache --private-key ~/.ssh/id_rsa cao-platform.yml -e "@inventory/**cao4**/all_variables.yml"
 
+>nohup ansible-playbook -i inventory/cao4/ion.ini cao-platform.yml -e "@inventory/cao4/all_variables.yml" --flush-cache > cao4-newdeploy.log &
+
 ## COSA APP
 
 then install COSA, don't forget to prepare `hosts` and `cosa_app_k8s_deploy.yml` for the correct branch and gitea server.

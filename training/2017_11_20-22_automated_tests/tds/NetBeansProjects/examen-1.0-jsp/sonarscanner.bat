@@ -1,0 +1,1 @@
+C:\plateforme-sonarqube\sonar-scanner-3.0.3.778-windows\bin\sonar-scanner.bat

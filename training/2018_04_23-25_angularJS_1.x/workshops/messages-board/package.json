@@ -1,0 +1,13 @@
+{
+  "name": "messages-board",
+  "version": "1.0.0",
+  "scripts": {
+    "hello": "msg \"%username%\" Bonjour TypeWriter",
+    "start": "lite-server",
+    "api":"json-server api/db.json -p 5050 -w"
+  },
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bootstrap": "^3.3.7"
+  }
+}
