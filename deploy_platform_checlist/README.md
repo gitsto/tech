@@ -48,7 +48,7 @@ then install
 
 then install COSA, don't forget to prepare `hosts` and `cosa_app_k8s_deploy.yml` for the correct branch and gitea server.
 
-ansible-playbook -i hosts --flush-cache --private-key ~/.ssh/id_rsa cosa_app_k8s_deploy.yml
+>ansible-playbook -i hosts --flush-cache --private-key ~/.ssh/id_rsa cosa_app_k8s_deploy.yml
 
 after update of a version, please execute this command to 'accelerate' redeploy of updated apps
 
