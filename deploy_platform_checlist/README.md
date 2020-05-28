@@ -6,6 +6,10 @@ Connect to esxi, then stop, and remove all the VMs: master, worker 1 & 2
 Then,
 Connect to [vcenter interface](https://172.17.1.103/ui/#?extensionId=vsphere.core.relateditems.specs.datacenter.vms.vmsForDatacenter&objectId=urn:vmomi:Datacenter:datacenter-1084:28c1b61a-9eb7-4a33-8b91-8583ff374a3d&navigator=vsphere.core.viTree.hostsAndClustersView
 )
+
+>vcenter_username: "Administrator@vsphere.local"
+>vcenter_password: "Admin@94120"
+
 expand one unused Datacenter of a platform (check with your colleagues), and remove the node having the ip address has a name
 
 ## Virtualization playbooks
@@ -18,7 +22,17 @@ modify:
 - [x] setup_vms.yaml
 
 then start
->ansible-playbook setup_hypervisor.yml
+>ansible-playbook setup_hypervisor.yml  
+
+at this point, you could have an error, don't panicm relaunch the command with ooption "-vvv"  
+if its this one, you can continue to next playbook  
+
+```error
+"msg": "Failed to add host 172.17.1.97 to vCenter: The name '172.17.1.97' already exists."
+```
+
+then
+
 >ansible-playbook setup_vms.yaml
 
 ## K8s-cluster playbooks
