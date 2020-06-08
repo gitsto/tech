@@ -3,12 +3,14 @@
 ## Remove existing VMs from platform
 
 Connect to esxi, then stop, and remove all the VMs: master, worker 1 & 2
+
 Then,
+
 Connect to [vcenter interface](https://172.17.1.103/ui/#?extensionId=vsphere.core.relateditems.specs.datacenter.vms.vmsForDatacenter&objectId=urn:vmomi:Datacenter:datacenter-1084:28c1b61a-9eb7-4a33-8b91-8583ff374a3d&navigator=vsphere.core.viTree.hostsAndClustersView
 )
 
->vcenter_username: "Administrator@vsphere.local"
->vcenter_password: "Admin@94120"
+>vcenter_username: Administrator@vsphere.local  
+>vcenter_password: Admin@94120
 
 expand one unused Datacenter of a platform (check with your colleagues), and remove the node having the ip address has a name
 
