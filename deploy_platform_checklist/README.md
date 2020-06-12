@@ -2,7 +2,7 @@
 
 ## Remove existing VMs from platform
 
-Connect to esxi, then stop, and remove all the VMs: master, worker 1 & 2
+Connect to esxi cao1 <https://172.17.1.97/ui/#/login>, then stop, and remove all the VMs: master, worker 1 & 2
 
 Then,
 
@@ -26,7 +26,7 @@ modify:
 then start
 >ansible-playbook setup_hypervisor.yml  
 
-at this point, you could have an error, don't panicm relaunch the command with ooption "-vvv"  
+at this point, you could have an error, don't panic relaunch the command with ooption "-vvv"  
 if its this one, you can continue to next playbook  
 
 ```error
