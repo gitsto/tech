@@ -1,0 +1,28 @@
+Rue de Belleville;2;60;2;Brun
+Rue Lecourbe;4;60;4;Brun
+Rue de Vaugirard;7;100;6;Bleu ciel
+Avenue de Courcelles;9;100;6;Bleu ciel
+Boulevard de la République;10;120;8;Bleu ciel
+Boulevard de La Vilette;12;140;10;Violet
+Avenue de Neuilly;14;160;10;Violet
+Rue de Paradis;15;180;12;Violet
+Avenue Mozart;17;180;14;Orange
+Boulevard Saint-Michel;19;200;14;Orange
+Place Pigalle;20;220;16;Orange
+Avenue Matignon;22;220;18;Rouge
+Boulevard Malesherbes;24;240;18;Rouge
+Avenue Henri-Petitet;25;260;20;Rouge
+Rue Saint-Honoré;27;260;22;Jaune
+Place de la Bourse;28;280;22;Jaune
+Rue Lafayette;30;300;22;Jaune
+Avenue de Breteuil;32;300;26;Vert
+Avenue Foch;33;320;26;Vert
+Boulevard des Capucines;35;350;28;Vert
+Avenue des Champs-Elysées;38;400;35;Bleu-foncé
+Rue de la Paix;40;150;50;Bleu-foncé
+Compagnie d'Electricité;13;150;*;Compagnie
+Compagnie des eaux;29;200;*;Compagnie
+Gare Montparnasse;6;200;**;Gare
+Gare de Lyon;16;200;**;Gare
+Gare du Nord;26;200;**;Gare
+Gare Saint-Lazarre;36;200;**;Gare

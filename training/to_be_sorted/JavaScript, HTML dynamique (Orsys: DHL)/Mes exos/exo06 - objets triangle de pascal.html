@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Exercice Navigator</title>
+		<script src="lib.js">
+		</script>		
+	</head>
+<body>
+
+<p> Exemple :
+	<script>
+
+	/*
+	init = function(codeCouleur, indice) {
+		if (indice < 0) {
+			document.write("Indice negatif...<br>");
+		} 
+			//var couleurs = ["R", "V", "B"];
+		switch (codeCouleur) {
+			case 'R':
+				this.couleur = "Rouge";
+				break;
+			case 'V':
+				this.couleur = "Vert";
+				break;
+			case 'B':
+				this.couleur = "Bleu";
+				break;
+			default: 
+				this.couleur = "Inconnue";
+		}
+		if (indice < 0) {
+			this.prix = 0;
+		} else {
+			this.prix = (parseFloat(indice)*1000)/0.94;
+		}
+	}
+
+	var monFruit = new init("D", 20);
+	document.write("Fruit de couleur " + monFruit.couleur + ", dont le prix est: " + monFruit.prix + "<br>");
+		*/
+		
+	triangle = function(nbLignes, nbColonnes) {
+	
+		var tab = new Array();
+		for (var i = 0; i < nbLignes; i++) {
+			tab[i] = new Array(nbColonnes);
+		}
+		
+		tab[0][0] = 1;
+		tab[0][1] = 1;
+		tab[1][1] = 1;
+		
+		for (var ligne=2; ligne<nbLignes; ligne++) {
+			for (var colonne=0; colonne<nbColonnes; colonne++) {
+				tab[ligne][colonne] = tab[ligne-1][colonne] + tab[ligne-1][colonne-1]
+				console.log("elem: " + tab[ligne][colonne])
+			}
+		}
+		
+		//tab.forEach()
+		
+		return tab;
+	}
+	
+	console.log(triangle(7, 6));
+	
+	</script>
+
+</body>
+</html>

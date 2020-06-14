@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+FORMATION : Denis GAUDARE
+DATE DE CREATION : 01/09/2014
+DATE DE DERNIERE MODIFICATION : 16/08/2015
+OBJET : Etablir un tableau d'amortissement linéaire
+-->
+
+<!-- Début script HTML -->
+<html>
+
+	<!-- Début entête script HTML -->
+	<head>
+
+		<!-- Balise meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Titre du script HTML -->
+		<title>REF_5_20</title>
+
+	</head>
+
+	<!-- Début section body du script HTML -->
+	<body>
+
+		<!-- Titre du traitement -->
+		<h1>ORSYS - JavaScript - Exercice REF_5_20</h1>
+
+		<!-- Début script JavaScript -->
+		<script>
+		
+			/* Affichage du nom du script */
+			// alert("Exercice REF_5_20");
+
+			/* Déclaration de variables locales */
+			/*
+			jj        : Jour d'acquisition
+			mm        : Mois d'acquisition
+			aa        : Année d'acquisition
+			v         : Valeur d'acquisition
+			n         : Durée d'amortissement
+			lib       : Libellé du bien amorti
+			t         : Taux d'amortissement
+			a1        : Annuité no 1
+			vnc_debut : Valeur résiduelle début d'exercice
+			cumul     : Cumul des amortissements
+			vnc_fin   : Valeur résiduelle fin d'exercice
+			af        : Annuité finale
+			an        : Annuité normale
+			cpt       : Compteur de boucle
+			*/
+			var jj, mm, aa, v, n, lib, t, a1, vnc_debut, cumul, vnc_fin, af, an, cpt, debut, fin;
+
+			/* Initialisations */
+			lib = prompt("Libellé :");
+			jj = parseInt(prompt("Jour d’acquisition :"));
+			mm = parseInt(prompt("Mois d’acquisition :"));
+			aa = parseInt(prompt("Année d’acquisition :"));
+			v = parseFloat(prompt("Valeur d’acquisition :"));
+			n = parseInt(prompt("Durée d’amortissement :"));
+
+			/* Calcul du taux d'amortissement */
+			t = 1 / n;
+
+
+		</script>
+
+		<!-- Affichage du code source -->
+		<br />
+		<br />
+		<br />
+		<center>
+			<a href="JavaScript:window.location='view-source:' + window.location"> Code source </a>
+		</center>
+
+	</body>
+
+</html>

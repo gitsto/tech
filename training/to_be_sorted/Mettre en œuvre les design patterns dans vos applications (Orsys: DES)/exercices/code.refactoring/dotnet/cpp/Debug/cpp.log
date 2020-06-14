@@ -1,0 +1,42 @@
+﻿La génération a démarré 09/09/2011 10:37:35.
+     1>Projet "C:\formation\orsys\DES.5j\exercices\dotnet\cpp\cpp.vcxproj" sur le nœud 2 (rebuild cible(s)).
+     1>_PrepareForClean:
+         Suppression du fichier "Debug\cpp.lastbuildstate".
+       InitializeBuildStatus:
+         Création de "Debug\cpp.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       GenerateTargetFrameworkMonikerAttribute:
+       La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\cpp.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt stdafx.cpp /clr:nostdlib 
+         stdafx.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\cpp.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp cpp.cpp Customer.cpp Movie.cpp Rental.cpp /clr:nostdlib 
+         AssemblyInfo.cpp
+         cpp.cpp
+         Customer.cpp
+         Movie.cpp
+         Rental.cpp
+         Génération de code en cours...
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /analyze- /errorReport:prompt "C:\Users\fabien\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\formation\orsys\DES.5j\exercices\dotnet\Debug\cpp.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\cpp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\formation\orsys\DES.5j\exercices\dotnet\Debug\cpp.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\cpp.obj
+         Debug\Customer.obj
+         Debug\Movie.obj
+         Debug\Rental.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         cpp.vcxproj -> C:\formation\orsys\DES.5j\exercices\dotnet\Debug\cpp.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\formation\orsys\DES.5j\exercices\dotnet\Debug\cpp.exe;#1" /manifest Debug\cpp.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\cpp.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\cpp.lastbuildstate".
+     1>Génération du projet "C:\formation\orsys\DES.5j\exercices\dotnet\cpp\cpp.vcxproj" terminée (rebuild cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:03.73

@@ -1,0 +1,19 @@
+<div id="h1" onclick="javascript:alert('you clicked the header')" class="header">
+  <span id="s1" onclick="javascript:alert('you clicked inside the header');">something inside the header</span>
+</div>
+<br/>
+<br/>
+<div id="h1" onclick="alertMe('you clicked the second header')" class="header">
+  <span id="s1" onclick="alert('you clicked inside the second header');">something inside the header</span>
+</div>
+<script>
+function alertMe(e) {
+ 	var evt = e ? e:window.event;
+ 	
+ 	// Pour gerer les difference des navigateurs
+ 	
+ 	if (evt.stopPropagation)    evt.stopPropagation(); // IE0 9 ans other Browsers 
+ 	if (evt.cancelBubble!=null) evt.cancelBubble = true; //IE8 and Lower
+	alert(msg);
+}
+</script>

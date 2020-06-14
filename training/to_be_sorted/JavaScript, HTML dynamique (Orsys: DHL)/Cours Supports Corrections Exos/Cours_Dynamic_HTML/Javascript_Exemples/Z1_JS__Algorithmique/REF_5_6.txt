@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+FORMATION : Denis GAUDARE
+DATE DE CREATION : 01/09/2014
+DATE DE DERNIERE MODIFICATION : 16/08/2015
+OBJET : Calculer le PGCD de n couplets d'entiers (> 0) (Méthode de la division)
+NB : La saisie sera terminée par la frappe de -1 pour le premier élément du couplet, c'est-à-dire a.
+Exemple :
+a : 21
+b : 7
+PGCD : 7
+
+a : 372
+b : 226
+PGCD : 2
+
+a : 127
+b : 28
+PGCD : 1
+
+a : -1
+-->
+
+<!-- Début script HTML -->
+<html>
+
+	<!-- Début entête script HTML -->
+	<head>
+
+		<!-- Balise meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Titre du script HTML -->
+		<title>REF_5_6</title>
+
+	</head>
+
+	<!-- Début section body du script HTML -->
+	<body>
+
+		<!-- Titre du traitement -->
+		<h1>ORSYS - JavaScript - Exercice REF_5_6</h1>
+
+		<!-- Début script JavaScript -->
+		<script>
+		
+
+
+		</script>
+
+		<!-- Affichage du code source -->
+		<br />
+		<br />
+		<br />
+		<center>
+			<a href="JavaScript:window.location='view-source:' + window.location"> Code source </a>
+		</center>
+
+	</body>
+
+</html>

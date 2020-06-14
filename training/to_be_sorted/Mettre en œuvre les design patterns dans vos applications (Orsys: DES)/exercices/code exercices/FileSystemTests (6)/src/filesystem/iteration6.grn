@@ -1,0 +1,76 @@
+<uml>
+   <greenVersion="30500"/>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.shared.objetsmetier.intf{FichierHandleEvent.java[FichierHandleEvent"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="52"/>
+      <y="54"/>
+   </type>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.shared.objetsmetier.intf{FichierHandleListener.java[FichierHandleListener"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="437"/>
+      <y="127"/>
+   </type>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.shared.objetsmetier.intf{IFichierHandle.java[IFichierHandle"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="430"/>
+      <y="51"/>
+   </type>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.impl{Fichier.java[Fichier"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="440"/>
+      <y="230"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.impl{Fichier.java[Fichier"/>
+      <targetType="=com.valtech.adp.filesystem/src<filesystem.shared.objetsmetier.intf{FichierHandleListener.java[FichierHandleListener"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <note>
+      <text="DP Observer: subject
+FichierHandleListener"/>
+      <height="36"/>
+      <width="150"/>
+      <x="433"/>
+      <y="13"/>
+   </note>
+   <note>
+      <text="DP Observer: Observer"/>
+      <height="24"/>
+      <width="150"/>
+      <x="583"/>
+      <y="184"/>
+   </note>
+   <note>
+      <text="DP Observer: Arguments"/>
+      <height="24"/>
+      <width="150"/>
+      <x="53"/>
+      <y="26"/>
+   </note>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.intf{IUniteLogique.java[IUniteLogique"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="47"/>
+      <y="255"/>
+   </type>
+   <note>
+      <text="DP Observer: Subject
+ChangeListener"/>
+      <height="32"/>
+      <width="150"/>
+      <x="49"/>
+      <y="222"/>
+   </note>
+</uml>
+

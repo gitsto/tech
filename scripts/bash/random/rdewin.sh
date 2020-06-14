@@ -1,0 +1,2 @@
+./rde.sh win
+

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_bsQNMXfiEd6LL6nkWCMRPw">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNMnfiEd6LL6nkWCMRPw" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNM3fiEd6LL6nkWCMRPw" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNNHfiEd6LL6nkWCMRPw" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNNXfiEd6LL6nkWCMRPw" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNNnfiEd6LL6nkWCMRPw" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNN3fiEd6LL6nkWCMRPw" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNOHfiEd6LL6nkWCMRPw" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bsQNOXfiEd6LL6nkWCMRPw" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_bsQNOnfiEd6LL6nkWCMRPw" name="filesystem">
+    <packagedElement xmi:type="uml:Package" xmi:id="_bsQNO3fiEd6LL6nkWCMRPw" name="iteration3">
+      <ownedComment xmi:id="_yzrTkHgVEd6dtPPdpkrv2w" annotatedElement="_bsQ0cHfiEd6LL6nkWCMRPw">
+        <body>Singleton : &#xD;
+getInstance</body>
+      </ownedComment>
+      <ownedComment xmi:id="_bs7lAngWEd6dtPPdpkrv2w" annotatedElement="_bsQNPHfiEd6LL6nkWCMRPw _bsQ0cHfiEd6LL6nkWCMRPw">
+        <body>Bridge : Concept</body>
+      </ownedComment>
+      <ownedComment xmi:id="_tcW0IHgWEd6dtPPdpkrv2w" annotatedElement="_bsQ0k3fiEd6LL6nkWCMRPw _bsQ0V3fiEd6LL6nkWCMRPw">
+        <body>Bridge : Abstract Implementer</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQNPHfiEd6LL6nkWCMRPw" name="LogicalUnit" clientDependency="_bsQNPXfiEd6LL6nkWCMRPw">
+        <interfaceRealization xmi:id="_bsQNPXfiEd6LL6nkWCMRPw" name="ILogicalUnit" supplier="_bsQNaHfiEd6LL6nkWCMRPw" client="_bsQNPHfiEd6LL6nkWCMRPw" contract="_bsQNaHfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQNPnfiEd6LL6nkWCMRPw" name="getName" visibility="public">
+          <ownedParameter xmi:id="_bsQNP3fiEd6LL6nkWCMRPw" name="return" type="_bsQ0sHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQNQHfiEd6LL6nkWCMRPw" name="Visitor" isAbstract="true">
+        <ownedOperation xmi:id="_bsQNQXfiEd6LL6nkWCMRPw" name="visitFolder" visibility="public">
+          <ownedParameter xmi:id="_bsQNQnfiEd6LL6nkWCMRPw" name="folder" type="_bsQ0W3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQNQ3fiEd6LL6nkWCMRPw" name="visitFile" visibility="public">
+          <ownedParameter xmi:id="_bsQNRHfiEd6LL6nkWCMRPw" name="file" type="_bsQNZnfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQNRXfiEd6LL6nkWCMRPw" name="visitLink" visibility="public">
+          <ownedParameter xmi:id="_bsQNRnfiEd6LL6nkWCMRPw" name="link" type="_bsQ0anfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQNR3fiEd6LL6nkWCMRPw" name="ReferencableElement" clientDependency="_bsQNSXfiEd6LL6nkWCMRPw" isAbstract="true">
+        <generalization xmi:id="_bsQNSHfiEd6LL6nkWCMRPw" general="_bsQ0fnfiEd6LL6nkWCMRPw"/>
+        <interfaceRealization xmi:id="_bsQNSXfiEd6LL6nkWCMRPw" name="IReferenceableElement" supplier="_bsQNZHfiEd6LL6nkWCMRPw" client="_bsQNR3fiEd6LL6nkWCMRPw" contract="_bsQNZHfiEd6LL6nkWCMRPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQNSnfiEd6LL6nkWCMRPw" name="IDisk">
+        <ownedOperation xmi:id="_bsQNS3fiEd6LL6nkWCMRPw" name="getPhysicalDisk" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_bsQNTHfiEd6LL6nkWCMRPw" name="return" type="_bsQ0V3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQNTXfiEd6LL6nkWCMRPw" name="getCapacity" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_bsQNTnfiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQNT3fiEd6LL6nkWCMRPw" name="getUnit" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_bsQNUHfiEd6LL6nkWCMRPw" name="unitName" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQNUXfiEd6LL6nkWCMRPw" name="return" type="_bsQNaHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQNUnfiEd6LL6nkWCMRPw" name="createUnit" visibility="public">
+          <ownedParameter xmi:id="_bsQNU3fiEd6LL6nkWCMRPw" name="partition" type="_bsQ0k3fiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQNVHfiEd6LL6nkWCMRPw" name="return" type="_bsQNaHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQNVXfiEd6LL6nkWCMRPw" name="Process">
+        <generalization xmi:id="_bsQNVnfiEd6LL6nkWCMRPw" general="_bsQNQHfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQNV3fiEd6LL6nkWCMRPw" name="visitFile" visibility="public">
+          <ownedParameter xmi:id="_bsQNWHfiEd6LL6nkWCMRPw" name="file" type="_bsQNZnfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQNWXfiEd6LL6nkWCMRPw" name="visitFolder" visibility="public">
+          <ownedParameter xmi:id="_bsQNWnfiEd6LL6nkWCMRPw" name="folder" type="_bsQ0W3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQNW3fiEd6LL6nkWCMRPw" name="visitLink" visibility="public">
+          <ownedParameter xmi:id="_bsQNXHfiEd6LL6nkWCMRPw" name="link" type="_bsQ0anfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQNXXfiEd6LL6nkWCMRPw" name="RootFolder">
+        <generalization xmi:id="_bsQNXnfiEd6LL6nkWCMRPw" general="_bsQNa3fiEd6LL6nkWCMRPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQNX3fiEd6LL6nkWCMRPw" name="MyPhysicalDisk" clientDependency="_bsQNYHfiEd6LL6nkWCMRPw">
+        <interfaceRealization xmi:id="_bsQNYHfiEd6LL6nkWCMRPw" name="IPhysicalDisk" supplier="_bsQ0V3fiEd6LL6nkWCMRPw" client="_bsQNX3fiEd6LL6nkWCMRPw" contract="_bsQ0V3fiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQNYXfiEd6LL6nkWCMRPw" name="createUnit" visibility="public">
+          <ownedParameter xmi:id="_bsQNYnfiEd6LL6nkWCMRPw" name="unitName" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQNY3fiEd6LL6nkWCMRPw" name="partition" type="_bsQ0k3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQNZHfiEd6LL6nkWCMRPw" name="IReferenceableElement">
+        <generalization xmi:id="_bsQNZXfiEd6LL6nkWCMRPw" general="_bsQ0lHfiEd6LL6nkWCMRPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQNZnfiEd6LL6nkWCMRPw" name="IFile">
+        <generalization xmi:id="_bsQNZ3fiEd6LL6nkWCMRPw" general="_bsQNZHfiEd6LL6nkWCMRPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQNaHfiEd6LL6nkWCMRPw" name="ILogicalUnit">
+        <ownedOperation xmi:id="_bsQNaXfiEd6LL6nkWCMRPw" name="getName">
+          <ownedParameter xmi:id="_bsQNanfiEd6LL6nkWCMRPw" name="return" type="_bsQ0sHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQNa3fiEd6LL6nkWCMRPw" name="Folder" clientDependency="_bsQ0QXfiEd6LL6nkWCMRPw">
+        <generalization xmi:id="_bsQ0QHfiEd6LL6nkWCMRPw" general="_bsQNR3fiEd6LL6nkWCMRPw"/>
+        <interfaceRealization xmi:id="_bsQ0QXfiEd6LL6nkWCMRPw" name="IFolder" supplier="_bsQ0W3fiEd6LL6nkWCMRPw" client="_bsQNa3fiEd6LL6nkWCMRPw" contract="_bsQ0W3fiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQ0QnfiEd6LL6nkWCMRPw" name="getSize" visibility="public">
+          <ownedParameter xmi:id="_bsQ0Q3fiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0RHfiEd6LL6nkWCMRPw" name="getElementByName" visibility="public">
+          <ownedParameter xmi:id="_bsQ0RXfiEd6LL6nkWCMRPw" name="name" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQ0RnfiEd6LL6nkWCMRPw" name="return" type="_bsQ0lHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0R3fiEd6LL6nkWCMRPw" name="getLogicalUnitCapacity" visibility="public">
+          <ownedParameter xmi:id="_bsQ0SHfiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0SXfiEd6LL6nkWCMRPw" name="addFile" visibility="public">
+          <ownedParameter xmi:id="_bsQ0SnfiEd6LL6nkWCMRPw" name="file" type="_bsQNZnfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0S3fiEd6LL6nkWCMRPw" name="addFolder" visibility="public">
+          <ownedParameter xmi:id="_bsQ0THfiEd6LL6nkWCMRPw" name="folder" type="_bsQ0W3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0TXfiEd6LL6nkWCMRPw" name="addLink" visibility="public">
+          <ownedParameter xmi:id="_bsQ0TnfiEd6LL6nkWCMRPw" name="link" type="_bsQ0anfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0T3fiEd6LL6nkWCMRPw" name="iterator" visibility="public">
+          <ownedParameter xmi:id="_bsQ0UHfiEd6LL6nkWCMRPw" name="return" type="_bsQ0sXfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0UXfiEd6LL6nkWCMRPw" name="iteratorInDepthFirst" visibility="public">
+          <ownedParameter xmi:id="_bsQ0UnfiEd6LL6nkWCMRPw" name="return" type="_bsQ0sXfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0U3fiEd6LL6nkWCMRPw" name="accumulate" visibility="public">
+          <ownedParameter xmi:id="_bsQ0VHfiEd6LL6nkWCMRPw" name="list" type="_bsQ0snfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0VXfiEd6LL6nkWCMRPw" name="accept" visibility="public">
+          <ownedParameter xmi:id="_bsQ0VnfiEd6LL6nkWCMRPw" name="visitor" type="_bsQNQHfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQ0V3fiEd6LL6nkWCMRPw" name="IPhysicalDisk">
+        <ownedOperation xmi:id="_bsQ0WHfiEd6LL6nkWCMRPw" name="createUnit">
+          <ownedParameter xmi:id="_bsQ0WXfiEd6LL6nkWCMRPw" name="unitName" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQ0WnfiEd6LL6nkWCMRPw" name="partition" type="_bsQ0k3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQ0W3fiEd6LL6nkWCMRPw" name="IFolder">
+        <generalization xmi:id="_bsQ0XHfiEd6LL6nkWCMRPw" general="_bsQNZHfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQ0XXfiEd6LL6nkWCMRPw" name="addFile">
+          <ownedParameter xmi:id="_bsQ0XnfiEd6LL6nkWCMRPw" name="fichier" type="_bsQNZnfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0X3fiEd6LL6nkWCMRPw" name="addFolder">
+          <ownedParameter xmi:id="_bsQ0YHfiEd6LL6nkWCMRPw" name="dossier" type="_bsQ0W3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0YXfiEd6LL6nkWCMRPw" name="getElementByName">
+          <ownedParameter xmi:id="_bsQ0YnfiEd6LL6nkWCMRPw" name="nom" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQ0Y3fiEd6LL6nkWCMRPw" name="return" type="_bsQ0lHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0ZHfiEd6LL6nkWCMRPw" name="getLogicalUnitCapacity">
+          <ownedParameter xmi:id="_bsQ0ZXfiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0ZnfiEd6LL6nkWCMRPw" name="accept">
+          <ownedParameter xmi:id="_bsQ0Z3fiEd6LL6nkWCMRPw" name="vistor" type="_bsQNQHfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0aHfiEd6LL6nkWCMRPw" name="iterator">
+          <ownedParameter xmi:id="_bsQ0aXfiEd6LL6nkWCMRPw" name="return" type="_bsQ0sXfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQ0anfiEd6LL6nkWCMRPw" name="ILink">
+        <generalization xmi:id="_bsQ0a3fiEd6LL6nkWCMRPw" general="_bsQ0lHfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQ0bHfiEd6LL6nkWCMRPw" name="getReferenced">
+          <ownedParameter xmi:id="_bsQ0bXfiEd6LL6nkWCMRPw" name="return" type="_bsQNR3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0bnfiEd6LL6nkWCMRPw" name="setReferenced">
+          <ownedParameter xmi:id="_bsQ0b3fiEd6LL6nkWCMRPw" name="ref" type="_bsQNR3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQ0cHfiEd6LL6nkWCMRPw" name="Disk" clientDependency="_bsQ0cXfiEd6LL6nkWCMRPw">
+        <interfaceRealization xmi:id="_bsQ0cXfiEd6LL6nkWCMRPw" name="IDisk" supplier="_bsQNSnfiEd6LL6nkWCMRPw" client="_bsQ0cHfiEd6LL6nkWCMRPw" contract="_bsQNSnfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQ0cnfiEd6LL6nkWCMRPw" name="getInstance" visibility="public" isStatic="true">
+          <ownedParameter xmi:id="_bsQ0c3fiEd6LL6nkWCMRPw" name="return" type="_bsQNSnfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0dHfiEd6LL6nkWCMRPw" name="getPhysicalDisk" visibility="public">
+          <ownedParameter xmi:id="_bsQ0dXfiEd6LL6nkWCMRPw" name="return" type="_bsQ0V3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0dnfiEd6LL6nkWCMRPw" name="getCapacity" visibility="public">
+          <ownedParameter xmi:id="_bsQ0d3fiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0eHfiEd6LL6nkWCMRPw" name="createUnit" visibility="public">
+          <ownedParameter xmi:id="_bsQ0eXfiEd6LL6nkWCMRPw" name="partition" type="_bsQ0k3fiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQ0enfiEd6LL6nkWCMRPw" name="return" type="_bsQNaHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0e3fiEd6LL6nkWCMRPw" name="getUnit" visibility="public">
+          <ownedParameter xmi:id="_bsQ0fHfiEd6LL6nkWCMRPw" name="unitName" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+          <ownedParameter xmi:id="_bsQ0fXfiEd6LL6nkWCMRPw" name="return" type="_bsQNaHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQ0fnfiEd6LL6nkWCMRPw" name="Element" clientDependency="_bsQ0f3fiEd6LL6nkWCMRPw" isAbstract="true">
+        <interfaceRealization xmi:id="_bsQ0f3fiEd6LL6nkWCMRPw" name="IElement" supplier="_bsQ0lHfiEd6LL6nkWCMRPw" client="_bsQ0fnfiEd6LL6nkWCMRPw" contract="_bsQ0lHfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQ0gHfiEd6LL6nkWCMRPw" name="setParentFolder" visibility="public">
+          <ownedParameter xmi:id="_bsQ0gXfiEd6LL6nkWCMRPw" name="parentFolder" type="_bsQ0W3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0gnfiEd6LL6nkWCMRPw" name="getCreationDate" visibility="public">
+          <ownedParameter xmi:id="_bsQ0g3fiEd6LL6nkWCMRPw" name="return" type="_bsQ0s3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0hHfiEd6LL6nkWCMRPw" name="getName" visibility="public">
+          <ownedParameter xmi:id="_bsQ0hXfiEd6LL6nkWCMRPw" name="return" type="_bsQ0sHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0hnfiEd6LL6nkWCMRPw" name="setName" visibility="public">
+          <ownedParameter xmi:id="_bsQ0h3fiEd6LL6nkWCMRPw" name="nom" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0iHfiEd6LL6nkWCMRPw" name="getParentFolder" visibility="public">
+          <ownedParameter xmi:id="_bsQ0iXfiEd6LL6nkWCMRPw" name="return" type="_bsQ0W3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0infiEd6LL6nkWCMRPw" name="accumulate" visibility="public">
+          <ownedParameter xmi:id="_bsQ0i3fiEd6LL6nkWCMRPw" name="list" type="_bsQ0snfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQ0jHfiEd6LL6nkWCMRPw" name="File" clientDependency="_bsQ0jnfiEd6LL6nkWCMRPw">
+        <generalization xmi:id="_bsQ0jXfiEd6LL6nkWCMRPw" general="_bsQNR3fiEd6LL6nkWCMRPw"/>
+        <interfaceRealization xmi:id="_bsQ0jnfiEd6LL6nkWCMRPw" name="IFile" supplier="_bsQNZnfiEd6LL6nkWCMRPw" client="_bsQ0jHfiEd6LL6nkWCMRPw" contract="_bsQNZnfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQ0j3fiEd6LL6nkWCMRPw" name="getSize" visibility="public">
+          <ownedParameter xmi:id="_bsQ0kHfiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0kXfiEd6LL6nkWCMRPw" name="accept" visibility="public">
+          <ownedParameter xmi:id="_bsQ0knfiEd6LL6nkWCMRPw" name="visitor" type="_bsQNQHfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQ0k3fiEd6LL6nkWCMRPw" name="IPartition"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_bsQ0lHfiEd6LL6nkWCMRPw" name="IElement">
+        <ownedOperation xmi:id="_bsQ0lXfiEd6LL6nkWCMRPw" name="getName">
+          <ownedParameter xmi:id="_bsQ0lnfiEd6LL6nkWCMRPw" name="return" type="_bsQ0sHfiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0l3fiEd6LL6nkWCMRPw" name="setName">
+          <ownedParameter xmi:id="_bsQ0mHfiEd6LL6nkWCMRPw" name="name" type="_bsQ0sHfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0mXfiEd6LL6nkWCMRPw" name="getCreationDate">
+          <ownedParameter xmi:id="_bsQ0mnfiEd6LL6nkWCMRPw" name="return" type="_bsQ0s3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0m3fiEd6LL6nkWCMRPw" name="getSize">
+          <ownedParameter xmi:id="_bsQ0nHfiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0nXfiEd6LL6nkWCMRPw" name="getParentFolder">
+          <ownedParameter xmi:id="_bsQ0nnfiEd6LL6nkWCMRPw" name="return" type="_bsQ0W3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0n3fiEd6LL6nkWCMRPw" name="setParentFolder">
+          <ownedParameter xmi:id="_bsQ0oHfiEd6LL6nkWCMRPw" name="parentFolder" type="_bsQ0W3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0oXfiEd6LL6nkWCMRPw" name="accumulate">
+          <ownedParameter xmi:id="_bsQ0onfiEd6LL6nkWCMRPw" name="list" type="_bsQ0snfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0o3fiEd6LL6nkWCMRPw" name="accept">
+          <ownedParameter xmi:id="_bsQ0pHfiEd6LL6nkWCMRPw" name="visitor" type="_bsQNQHfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bsQ0pXfiEd6LL6nkWCMRPw" name="Link" clientDependency="_bsQ0p3fiEd6LL6nkWCMRPw">
+        <generalization xmi:id="_bsQ0pnfiEd6LL6nkWCMRPw" general="_bsQ0fnfiEd6LL6nkWCMRPw"/>
+        <interfaceRealization xmi:id="_bsQ0p3fiEd6LL6nkWCMRPw" name="ILink" supplier="_bsQ0anfiEd6LL6nkWCMRPw" client="_bsQ0pXfiEd6LL6nkWCMRPw" contract="_bsQ0anfiEd6LL6nkWCMRPw"/>
+        <ownedOperation xmi:id="_bsQ0qHfiEd6LL6nkWCMRPw" name="getSize" visibility="public">
+          <ownedParameter xmi:id="_bsQ0qXfiEd6LL6nkWCMRPw" name="return" type="_bsQNN3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0qnfiEd6LL6nkWCMRPw" name="getReferenced" visibility="public">
+          <ownedParameter xmi:id="_bsQ0q3fiEd6LL6nkWCMRPw" name="return" type="_bsQNR3fiEd6LL6nkWCMRPw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0rHfiEd6LL6nkWCMRPw" name="setReferenced" visibility="public">
+          <ownedParameter xmi:id="_bsQ0rXfiEd6LL6nkWCMRPw" name="ref" type="_bsQNR3fiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_bsQ0rnfiEd6LL6nkWCMRPw" name="accept" visibility="public">
+          <ownedParameter xmi:id="_bsQ0r3fiEd6LL6nkWCMRPw" name="visitor" type="_bsQNQHfiEd6LL6nkWCMRPw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_bsQ0sHfiEd6LL6nkWCMRPw" name="String"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_bsQ0sXfiEd6LL6nkWCMRPw" name="Iterator"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_bsQ0snfiEd6LL6nkWCMRPw" name="List"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_bsQ0s3fiEd6LL6nkWCMRPw" name="Date"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_AIBegHgWEd6dtPPdpkrv2w" name="" memberEnd="_AIBegXgWEd6dtPPdpkrv2w _AIBehHgWEd6dtPPdpkrv2w" navigableOwnedEnd="_AIBehHgWEd6dtPPdpkrv2w">
+        <ownedEnd xmi:id="_AIBegXgWEd6dtPPdpkrv2w" name="logicalUnit" type="_bsQNPHfiEd6LL6nkWCMRPw" association="_AIBegHgWEd6dtPPdpkrv2w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AIBegngWEd6dtPPdpkrv2w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AIBeg3gWEd6dtPPdpkrv2w" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_AIBehHgWEd6dtPPdpkrv2w" name="iPartition" type="_bsQ0k3fiEd6LL6nkWCMRPw" association="_AIBegHgWEd6dtPPdpkrv2w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AIBehXgWEd6dtPPdpkrv2w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AIBehngWEd6dtPPdpkrv2w" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Sf2KangWEd6dtPPdpkrv2w" name="" memberEnd="_Sf2Ka3gWEd6dtPPdpkrv2w _Sf2KbngWEd6dtPPdpkrv2w" navigableOwnedEnd="_Sf2KbngWEd6dtPPdpkrv2w">
+        <ownedEnd xmi:id="_Sf2Ka3gWEd6dtPPdpkrv2w" name="disk" type="_bsQ0cHfiEd6LL6nkWCMRPw" association="_Sf2KangWEd6dtPPdpkrv2w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Sf2KbHgWEd6dtPPdpkrv2w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Sf2KbXgWEd6dtPPdpkrv2w" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_Sf2KbngWEd6dtPPdpkrv2w" name="iPhysicalDisk" type="_bsQ0V3fiEd6LL6nkWCMRPw" association="_Sf2KangWEd6dtPPdpkrv2w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Sf2Kb3gWEd6dtPPdpkrv2w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Sf2KcHgWEd6dtPPdpkrv2w" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

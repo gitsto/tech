@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_eMluUKpSEd2aFZVN_lf99w">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluUapSEd2aFZVN_lf99w" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluUqpSEd2aFZVN_lf99w" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluU6pSEd2aFZVN_lf99w" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluVKpSEd2aFZVN_lf99w" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluVapSEd2aFZVN_lf99w" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluVqpSEd2aFZVN_lf99w" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluV6pSEd2aFZVN_lf99w" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eMluWKpSEd2aFZVN_lf99w" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_eMluWapSEd2aFZVN_lf99w" name="filesystem">
+    <packagedElement xmi:type="uml:Package" xmi:id="_eMluWqpSEd2aFZVN_lf99w" name="iteration1">
+      <packagedElement xmi:type="uml:Package" xmi:id="_eMluW6pSEd2aFZVN_lf99w" name="encapsulation">
+        <packagedElement xmi:type="uml:Class" xmi:id="_eMluXKpSEd2aFZVN_lf99w" name="RootFolder">
+          <generalization xmi:id="_eMluXapSEd2aFZVN_lf99w" general="_eMludapSEd2aFZVN_lf99w"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eMluXqpSEd2aFZVN_lf99w" name="ReferencableElement">
+          <generalization xmi:id="_eMluX6pSEd2aFZVN_lf99w" general="_eMluYKpSEd2aFZVN_lf99w"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eMluYKpSEd2aFZVN_lf99w" name="Element">
+          <ownedAttribute xmi:id="_eMluYapSEd2aFZVN_lf99w" name="dossierParent" visibility="private" type="_eMludapSEd2aFZVN_lf99w"/>
+          <ownedAttribute xmi:id="_eMluYqpSEd2aFZVN_lf99w" name="nom" visibility="private" type="_eMlukKpSEd2aFZVN_lf99w"/>
+          <ownedAttribute xmi:id="_eMluY6pSEd2aFZVN_lf99w" name="creationDate" visibility="private" type="_eMlukapSEd2aFZVN_lf99w"/>
+          <ownedOperation xmi:id="_eMluZKpSEd2aFZVN_lf99w" name="setParentFolder" visibility="public">
+            <ownedParameter xmi:id="_eMluZapSEd2aFZVN_lf99w" name="dossierParent" type="_eMludapSEd2aFZVN_lf99w"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMluZqpSEd2aFZVN_lf99w" name="getCreationDate" visibility="public">
+            <ownedParameter xmi:id="_eMluZ6pSEd2aFZVN_lf99w" name="return" type="_eMlukapSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMluaKpSEd2aFZVN_lf99w" name="getName" visibility="public">
+            <ownedParameter xmi:id="_eMluaapSEd2aFZVN_lf99w" name="return" type="_eMlukKpSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMluaqpSEd2aFZVN_lf99w" name="setName" visibility="public">
+            <ownedParameter xmi:id="_eMlua6pSEd2aFZVN_lf99w" name="nom" type="_eMlukKpSEd2aFZVN_lf99w"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMlubKpSEd2aFZVN_lf99w" name="getParentFolder" visibility="public">
+            <ownedParameter xmi:id="_eMlubapSEd2aFZVN_lf99w" name="return" type="_eMludapSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMlubqpSEd2aFZVN_lf99w" name="getSize" visibility="public" isAbstract="true">
+            <ownedParameter xmi:id="_eMlub6pSEd2aFZVN_lf99w" name="return" type="_eMluVqpSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eMlucKpSEd2aFZVN_lf99w" name="File">
+          <generalization xmi:id="_eMlucapSEd2aFZVN_lf99w" general="_eMluXqpSEd2aFZVN_lf99w"/>
+          <ownedAttribute xmi:id="_eMlucqpSEd2aFZVN_lf99w" name="size" visibility="private" type="_eMluVqpSEd2aFZVN_lf99w"/>
+          <ownedOperation xmi:id="_eMluc6pSEd2aFZVN_lf99w" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_eMludKpSEd2aFZVN_lf99w" name="return" type="_eMluVqpSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eMludapSEd2aFZVN_lf99w" name="Folder">
+          <generalization xmi:id="_eMludqpSEd2aFZVN_lf99w" general="_eMluXqpSEd2aFZVN_lf99w"/>
+          <ownedAttribute xmi:id="_eMlud6pSEd2aFZVN_lf99w" name="elements" visibility="private" type="_eMlukqpSEd2aFZVN_lf99w"/>
+          <ownedOperation xmi:id="_eMlueKpSEd2aFZVN_lf99w" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_eMlueapSEd2aFZVN_lf99w" name="return" type="_eMluVqpSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMlueqpSEd2aFZVN_lf99w" name="getElementByName" visibility="public">
+            <ownedParameter xmi:id="_eMlue6pSEd2aFZVN_lf99w" name="nom" type="_eMlukKpSEd2aFZVN_lf99w"/>
+            <ownedParameter xmi:id="_eMlufKpSEd2aFZVN_lf99w" name="return" type="_eMluYKpSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMlufapSEd2aFZVN_lf99w" name="getLogicalUnitCapacity" visibility="public">
+            <ownedParameter xmi:id="_eMlufqpSEd2aFZVN_lf99w" name="return" type="_eMluVqpSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMluf6pSEd2aFZVN_lf99w" name="addFile" visibility="public">
+            <ownedParameter xmi:id="_eMlugKpSEd2aFZVN_lf99w" name="name" type="_eMlukKpSEd2aFZVN_lf99w"/>
+            <ownedParameter xmi:id="_eMlugapSEd2aFZVN_lf99w" name="size" type="_eMluVqpSEd2aFZVN_lf99w"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMlugqpSEd2aFZVN_lf99w" name="addFolder" visibility="public">
+            <ownedParameter xmi:id="_eMlug6pSEd2aFZVN_lf99w" name="name" type="_eMlukKpSEd2aFZVN_lf99w"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMluhKpSEd2aFZVN_lf99w" name="addLink" visibility="public">
+            <ownedParameter xmi:id="_eMluhapSEd2aFZVN_lf99w" name="name" type="_eMlukKpSEd2aFZVN_lf99w"/>
+            <ownedParameter xmi:id="_eMluhqpSEd2aFZVN_lf99w" name="ref" type="_eMluXqpSEd2aFZVN_lf99w"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMluh6pSEd2aFZVN_lf99w" name="checkFileSize" visibility="private">
+            <ownedParameter xmi:id="_eMluiKpSEd2aFZVN_lf99w" name="file" type="_eMlucKpSEd2aFZVN_lf99w"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_eMluiapSEd2aFZVN_lf99w" name="addElement" visibility="private">
+            <ownedParameter xmi:id="_eMluiqpSEd2aFZVN_lf99w" name="element" type="_eMluYKpSEd2aFZVN_lf99w"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eMlui6pSEd2aFZVN_lf99w" name="Link">
+          <generalization xmi:id="_eMlujKpSEd2aFZVN_lf99w" general="_eMluYKpSEd2aFZVN_lf99w"/>
+          <ownedAttribute xmi:id="_eMlujapSEd2aFZVN_lf99w" name="ref" visibility="private" type="_eMluXqpSEd2aFZVN_lf99w" association="_eMlulapSEd2aFZVN_lf99w"/>
+          <ownedOperation xmi:id="_eMlujqpSEd2aFZVN_lf99w" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_eMluj6pSEd2aFZVN_lf99w" name="return" type="_eMluVqpSEd2aFZVN_lf99w" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_eMlukKpSEd2aFZVN_lf99w" name="String"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_eMlukapSEd2aFZVN_lf99w" name="Date"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_eMlukqpSEd2aFZVN_lf99w" name="Map"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_eMlulapSEd2aFZVN_lf99w" memberEnd="_eMlujapSEd2aFZVN_lf99w _eMlulqpSEd2aFZVN_lf99w">
+          <ownedEnd xmi:id="_eMlulqpSEd2aFZVN_lf99w" name="target" type="_eMlui6pSEd2aFZVN_lf99w" association="_eMlulapSEd2aFZVN_lf99w"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_63Zs-qpSEd2aFZVN_lf99w" name="" memberEnd="_63Zs-6pSEd2aFZVN_lf99w _63Zs_qpSEd2aFZVN_lf99w" navigableOwnedEnd="_63Zs_qpSEd2aFZVN_lf99w">
+          <ownedEnd xmi:id="_63Zs-6pSEd2aFZVN_lf99w" name="folder" type="_eMludapSEd2aFZVN_lf99w" association="_63Zs-qpSEd2aFZVN_lf99w">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_63Zs_KpSEd2aFZVN_lf99w" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_63Zs_apSEd2aFZVN_lf99w" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_63Zs_qpSEd2aFZVN_lf99w" name="element" type="_eMluYKpSEd2aFZVN_lf99w" association="_63Zs-qpSEd2aFZVN_lf99w">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_63Zs_6pSEd2aFZVN_lf99w" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_63ZtAKpSEd2aFZVN_lf99w"/>
+          </ownedEnd>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

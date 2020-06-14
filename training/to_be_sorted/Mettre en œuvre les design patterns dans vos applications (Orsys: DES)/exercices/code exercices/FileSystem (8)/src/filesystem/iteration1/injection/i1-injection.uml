@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_i5M1YKm4Ed2aLJ-S9QimWg">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1Yam4Ed2aLJ-S9QimWg" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1Yqm4Ed2aLJ-S9QimWg" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1Y6m4Ed2aLJ-S9QimWg" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1ZKm4Ed2aLJ-S9QimWg" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1Zam4Ed2aLJ-S9QimWg" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1Zqm4Ed2aLJ-S9QimWg" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1Z6m4Ed2aLJ-S9QimWg" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i5M1aKm4Ed2aLJ-S9QimWg" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_i5M1aam4Ed2aLJ-S9QimWg" name="filesystem">
+    <packagedElement xmi:type="uml:Package" xmi:id="_i5M1aqm4Ed2aLJ-S9QimWg" name="iteration1">
+      <packagedElement xmi:type="uml:Package" xmi:id="_i5M1a6m4Ed2aLJ-S9QimWg" name="injection">
+        <packagedElement xmi:type="uml:Class" xmi:id="_i5M1bKm4Ed2aLJ-S9QimWg" name="FileSystem">
+          <ownedAttribute xmi:id="_i5M1bam4Ed2aLJ-S9QimWg" name="formats" visibility="package" type="_i5M1xKm4Ed2aLJ-S9QimWg"/>
+          <ownedOperation xmi:id="_i5M1bqm4Ed2aLJ-S9QimWg" name="getFormat" visibility="public">
+            <ownedParameter xmi:id="_i5M1b6m4Ed2aLJ-S9QimWg" name="format" type="_i5M1xam4Ed2aLJ-S9QimWg"/>
+            <ownedParameter xmi:id="_i5M1cKm4Ed2aLJ-S9QimWg" name="return" type="_i5M1kKm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_i5M1cam4Ed2aLJ-S9QimWg" name="IElement">
+          <ownedOperation xmi:id="_i5M1cqm4Ed2aLJ-S9QimWg" name="getName" visibility="package">
+            <ownedParameter xmi:id="_i5M1c6m4Ed2aLJ-S9QimWg" name="return" type="_i5M1xam4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1dKm4Ed2aLJ-S9QimWg" name="setName" visibility="package">
+            <ownedParameter xmi:id="_i5M1dam4Ed2aLJ-S9QimWg" name="name" type="_i5M1xam4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1dqm4Ed2aLJ-S9QimWg" name="getCreationDate" visibility="package">
+            <ownedParameter xmi:id="_i5M1d6m4Ed2aLJ-S9QimWg" name="return" type="_i5M1xqm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1eKm4Ed2aLJ-S9QimWg" name="getSize" visibility="package">
+            <ownedParameter xmi:id="_i5M1eam4Ed2aLJ-S9QimWg" name="return" type="_i5M1Zqm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1eqm4Ed2aLJ-S9QimWg" name="getParentFolder" visibility="package">
+            <ownedParameter xmi:id="_i5M1e6m4Ed2aLJ-S9QimWg" name="return" type="_i5M1g6m4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1fKm4Ed2aLJ-S9QimWg" name="setParentFolder" visibility="package">
+            <ownedParameter xmi:id="_i5M1fam4Ed2aLJ-S9QimWg" name="parentFolder" type="_i5M1g6m4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_i5M1fqm4Ed2aLJ-S9QimWg" name="IReferenceableElement">
+          <generalization xmi:id="_i5M1f6m4Ed2aLJ-S9QimWg" general="_i5M1cam4Ed2aLJ-S9QimWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_i5M1gKm4Ed2aLJ-S9QimWg" name="ReferencableElement" clientDependency="_i5M1gqm4Ed2aLJ-S9QimWg">
+          <generalization xmi:id="_i5M1gam4Ed2aLJ-S9QimWg" general="_i5M1s6m4Ed2aLJ-S9QimWg"/>
+          <interfaceRealization xmi:id="_i5M1gqm4Ed2aLJ-S9QimWg" name="IReferenceableElement" supplier="_i5M1fqm4Ed2aLJ-S9QimWg" client="_i5M1gKm4Ed2aLJ-S9QimWg" contract="_i5M1fqm4Ed2aLJ-S9QimWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_i5M1g6m4Ed2aLJ-S9QimWg" name="IFolder">
+          <generalization xmi:id="_i5M1hKm4Ed2aLJ-S9QimWg" general="_i5M1fqm4Ed2aLJ-S9QimWg"/>
+          <ownedOperation xmi:id="_i5M1ham4Ed2aLJ-S9QimWg" name="addFile" visibility="package">
+            <ownedParameter xmi:id="_i5M1hqm4Ed2aLJ-S9QimWg" name="fichier" type="_i5M1kqm4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1h6m4Ed2aLJ-S9QimWg" name="addFolder" visibility="package">
+            <ownedParameter xmi:id="_i5M1iKm4Ed2aLJ-S9QimWg" name="dossier" type="_i5M1g6m4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1iam4Ed2aLJ-S9QimWg" name="getElementByName" visibility="package">
+            <ownedParameter xmi:id="_i5M1iqm4Ed2aLJ-S9QimWg" name="nom" type="_i5M1xam4Ed2aLJ-S9QimWg"/>
+            <ownedParameter xmi:id="_i5M1i6m4Ed2aLJ-S9QimWg" name="return" type="_i5M1cam4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1jKm4Ed2aLJ-S9QimWg" name="getLogicalUnitCapacity" visibility="package">
+            <ownedParameter xmi:id="_i5M1jam4Ed2aLJ-S9QimWg" name="return" type="_i5M1Zqm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_i5M1kKm4Ed2aLJ-S9QimWg" name="IFormat"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_i5M1kam4Ed2aLJ-S9QimWg" name="ILogicalUnit"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_i5M1kqm4Ed2aLJ-S9QimWg" name="IFile">
+          <generalization xmi:id="_i5M1k6m4Ed2aLJ-S9QimWg" general="_i5M1fqm4Ed2aLJ-S9QimWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_i5M1lKm4Ed2aLJ-S9QimWg" name="File" clientDependency="_i5M1l6m4Ed2aLJ-S9QimWg">
+          <generalization xmi:id="_i5M1lam4Ed2aLJ-S9QimWg" general="_i5M1gKm4Ed2aLJ-S9QimWg"/>
+          <ownedAttribute xmi:id="_i5M1lqm4Ed2aLJ-S9QimWg" name="size" visibility="private" type="_i5M1Zqm4Ed2aLJ-S9QimWg"/>
+          <interfaceRealization xmi:id="_i5M1l6m4Ed2aLJ-S9QimWg" name="IFile" supplier="_i5M1kqm4Ed2aLJ-S9QimWg" client="_i5M1lKm4Ed2aLJ-S9QimWg" contract="_i5M1kqm4Ed2aLJ-S9QimWg"/>
+          <ownedOperation xmi:id="_i5M1mKm4Ed2aLJ-S9QimWg" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_i5M1mam4Ed2aLJ-S9QimWg" name="return" type="_i5M1Zqm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_i5M1mqm4Ed2aLJ-S9QimWg" name="Folder" clientDependency="_i5M1nam4Ed2aLJ-S9QimWg">
+          <generalization xmi:id="_i5M1m6m4Ed2aLJ-S9QimWg" general="_i5M1gKm4Ed2aLJ-S9QimWg"/>
+          <ownedAttribute xmi:id="_i5M1nKm4Ed2aLJ-S9QimWg" name="elements" visibility="private" type="_i5M1xKm4Ed2aLJ-S9QimWg"/>
+          <interfaceRealization xmi:id="_i5M1nam4Ed2aLJ-S9QimWg" name="IFolder" supplier="_i5M1g6m4Ed2aLJ-S9QimWg" client="_i5M1mqm4Ed2aLJ-S9QimWg" contract="_i5M1g6m4Ed2aLJ-S9QimWg"/>
+          <ownedOperation xmi:id="_i5M1nqm4Ed2aLJ-S9QimWg" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_i5M1n6m4Ed2aLJ-S9QimWg" name="return" type="_i5M1Zqm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1oKm4Ed2aLJ-S9QimWg" name="getElementByName" visibility="public">
+            <ownedParameter xmi:id="_i5M1oam4Ed2aLJ-S9QimWg" name="nom" type="_i5M1xam4Ed2aLJ-S9QimWg"/>
+            <ownedParameter xmi:id="_i5M1oqm4Ed2aLJ-S9QimWg" name="return" type="_i5M1cam4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1o6m4Ed2aLJ-S9QimWg" name="getLogicalUnitCapacity" visibility="public">
+            <ownedParameter xmi:id="_i5M1pKm4Ed2aLJ-S9QimWg" name="return" type="_i5M1Zqm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1pam4Ed2aLJ-S9QimWg" name="addFile" visibility="public">
+            <ownedParameter xmi:id="_i5M1pqm4Ed2aLJ-S9QimWg" name="file" type="_i5M1kqm4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1p6m4Ed2aLJ-S9QimWg" name="addFolder" visibility="public">
+            <ownedParameter xmi:id="_i5M1qKm4Ed2aLJ-S9QimWg" name="folder" type="_i5M1g6m4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1qam4Ed2aLJ-S9QimWg" name="addLink" visibility="public">
+            <ownedParameter xmi:id="_i5M1qqm4Ed2aLJ-S9QimWg" name="link" type="_i5M1sam4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1ram4Ed2aLJ-S9QimWg" name="checkFileSize" visibility="private">
+            <ownedParameter xmi:id="_i5M1rqm4Ed2aLJ-S9QimWg" name="file" type="_i5M1kqm4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1r6m4Ed2aLJ-S9QimWg" name="addElement" visibility="private">
+            <ownedParameter xmi:id="_i5M1sKm4Ed2aLJ-S9QimWg" name="element" type="_i5M1cam4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_i5M1sam4Ed2aLJ-S9QimWg" name="ILink">
+          <generalization xmi:id="_i5M1sqm4Ed2aLJ-S9QimWg" general="_i5M1cam4Ed2aLJ-S9QimWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_i5M1s6m4Ed2aLJ-S9QimWg" name="Element" clientDependency="_i5M1t6m4Ed2aLJ-S9QimWg">
+          <ownedAttribute xmi:id="_i5M1tKm4Ed2aLJ-S9QimWg" name="dossierParent" visibility="private" type="_i5M1g6m4Ed2aLJ-S9QimWg" association="_i5M1yKm4Ed2aLJ-S9QimWg"/>
+          <ownedAttribute xmi:id="_i5M1tam4Ed2aLJ-S9QimWg" name="nom" visibility="private" type="_i5M1xam4Ed2aLJ-S9QimWg"/>
+          <ownedAttribute xmi:id="_i5M1tqm4Ed2aLJ-S9QimWg" name="creationDate" visibility="private" type="_i5M1xqm4Ed2aLJ-S9QimWg"/>
+          <interfaceRealization xmi:id="_i5M1t6m4Ed2aLJ-S9QimWg" name="IElement" supplier="_i5M1cam4Ed2aLJ-S9QimWg" client="_i5M1s6m4Ed2aLJ-S9QimWg" contract="_i5M1cam4Ed2aLJ-S9QimWg"/>
+          <ownedOperation xmi:id="_i5M1uKm4Ed2aLJ-S9QimWg" name="setParentFolder" visibility="public">
+            <ownedParameter xmi:id="_i5M1uam4Ed2aLJ-S9QimWg" name="dossierParent" type="_i5M1g6m4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1uqm4Ed2aLJ-S9QimWg" name="getCreationDate" visibility="public">
+            <ownedParameter xmi:id="_i5M1u6m4Ed2aLJ-S9QimWg" name="return" type="_i5M1xqm4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1vKm4Ed2aLJ-S9QimWg" name="getName" visibility="public">
+            <ownedParameter xmi:id="_i5M1vam4Ed2aLJ-S9QimWg" name="return" type="_i5M1xam4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1vqm4Ed2aLJ-S9QimWg" name="setName" visibility="public">
+            <ownedParameter xmi:id="_i5M1v6m4Ed2aLJ-S9QimWg" name="nom" type="_i5M1xam4Ed2aLJ-S9QimWg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_i5M1wKm4Ed2aLJ-S9QimWg" name="getParentFolder" visibility="public">
+            <ownedParameter xmi:id="_i5M1wam4Ed2aLJ-S9QimWg" name="return" type="_i5M1g6m4Ed2aLJ-S9QimWg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_i5M1wqm4Ed2aLJ-S9QimWg" name="RootFolder">
+          <generalization xmi:id="_i5M1w6m4Ed2aLJ-S9QimWg" general="_i5M1mqm4Ed2aLJ-S9QimWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_i5M1xKm4Ed2aLJ-S9QimWg" name="Map"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_i5M1xam4Ed2aLJ-S9QimWg" name="String"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_i5M1xqm4Ed2aLJ-S9QimWg" name="Date"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_i5M1x6m4Ed2aLJ-S9QimWg" name="Iterator"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_i5M1yKm4Ed2aLJ-S9QimWg" memberEnd="_i5M1tKm4Ed2aLJ-S9QimWg _i5M1yam4Ed2aLJ-S9QimWg">
+          <ownedEnd xmi:id="_i5M1yam4Ed2aLJ-S9QimWg" name="target" type="_i5M1s6m4Ed2aLJ-S9QimWg" association="_i5M1yKm4Ed2aLJ-S9QimWg"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

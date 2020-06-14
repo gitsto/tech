@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+FORMATION : Denis GAUDARE
+DATE DE CREATION : 01/09/2014
+DATE DE DERNIERE MODIFICATION : 16/08/2015
+OBJET : Appel d'une procédure sans passage de paramètres
+-->
+
+<!-- Début script HTML -->
+<html>
+
+	<!-- Début entête script HTML -->
+	<head>
+
+		<!-- Balise meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Titre du script HTML -->
+		<title>Procedure_sans_param</title>
+
+	</head>
+
+	<!-- Début section body du script HTML -->
+	<body>
+
+		<!-- Titre du traitement -->
+		<h1>ORSYS - JavaScript - Exercice Procedure_sans_param</h1>
+
+		<!-- Début script JavaScript -->
+		<script>
+		
+	
+
+		</script>
+
+		<!-- Affichage du code source -->
+		<br />
+		<br />
+		<br />
+		<center>
+			<a href="JavaScript:window.location='view-source:' + window.location"> Code source </a>
+		</center>
+
+	</body>
+
+</html>

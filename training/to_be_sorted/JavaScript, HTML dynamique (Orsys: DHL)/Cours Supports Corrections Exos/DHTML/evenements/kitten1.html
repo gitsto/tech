@@ -1,0 +1,20 @@
+<!doctype html>
+<HTML>
+	<head>
+		<script>
+			function changeMoi(obj,img) {
+				/*im = obj.src;
+				obj.src = obj.newsrc;*/
+				obj.src = img;
+			}
+			</script>
+	</head>
+	
+	
+<BODY>
+	<img src="kitten1.jpg" width="50%" height="50%" 
+		onmouseover='changeMoi(this,"kittenpiano.jpg")' 
+		onmouseout='changeMoi(this,"kitten1.jpg")'
+	/>
+		</BODY>
+</HTML>

@@ -1,0 +1,10 @@
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\bin\Debug\vbnet.exe
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\bin\Debug\vbnet.pdb
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\bin\Debug\vbnet.xml
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\obj\x86\Debug\vbnet.Resources.resources
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\obj\x86\Debug\vbnet.exe
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\obj\x86\Debug\vbnet.xml
+C:\formation\orsys\DES.5j\exercices\dotnet\vbnet\obj\x86\Debug\vbnet.pdb

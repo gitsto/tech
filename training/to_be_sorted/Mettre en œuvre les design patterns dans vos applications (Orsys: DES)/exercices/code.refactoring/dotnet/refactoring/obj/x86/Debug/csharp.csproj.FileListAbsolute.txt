@@ -1,0 +1,5 @@
+C:\formation\orsys\DES.5j\exercices\dotnet\refactoring\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\formation\orsys\DES.5j\exercices\dotnet\refactoring\bin\Debug\csharp.exe
+C:\formation\orsys\DES.5j\exercices\dotnet\refactoring\bin\Debug\csharp.pdb
+C:\formation\orsys\DES.5j\exercices\dotnet\refactoring\obj\x86\Debug\csharp.exe
+C:\formation\orsys\DES.5j\exercices\dotnet\refactoring\obj\x86\Debug\csharp.pdb

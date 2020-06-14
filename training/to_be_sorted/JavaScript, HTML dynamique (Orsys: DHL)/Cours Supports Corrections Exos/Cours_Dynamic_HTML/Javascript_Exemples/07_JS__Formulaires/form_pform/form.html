@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Formulaire Patient</title>
+    <link rel="stylesheet" type="text/css" href="view.css" media="all">
+    <!--script type="text/javascript" src="view.js"></script-->
+</head>
+
+<body id="main_body">
+    <img id="top" src="top.png" alt="">
+    <div id="form_container">
+        <h1>
+         Formulaire Patient
+         </h1>
+        <form id="form_1053033" class="appnitro" method="post" action="">
+            <div class="form_description">
+                <h2>Formulaire Patient</h2>
+                <p>A remplir à l'arrivée du patient</p>
+            </div>
+            <ul>
+                <li id="li_1">
+                    <label class="description" for="element_1">Patient </label>
+                    <div>
+                        <input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value="" />
+                    </div>
+                </li>
+                <li id="li_2">
+                    <label class="description" for="element_2">Médicaments </label>
+                    <span>
+                                        <input id="element_2_1" name="element_2_1" class="element checkbox" type="checkbox" value="1" />
+                                        <label class="choice" for="element_2_1">Matin</label>
+                                        <input id="element_2_2" name="element_2_2" class="element checkbox" type="checkbox" value="1" />
+                                        <label class="choice" for="element_2_2">Midi</label>
+                                        <input id="element_2_3" name="element_2_3" class="element checkbox" type="checkbox" value="1" />
+                                        <label class="choice" for="element_2_3">Soir</label>
+                                    </span>
+                </li>
+                <li id="li_3">
+                    <label class="description" for="element_3">Chambre </label>
+                    <div>
+                        <select class="element select small" id="element_3" name="element_3">
+                            <option value="" selected="selected"></option>
+                            <option value="1">1A</option>
+                            <option value="2">1B</option>
+                            <option value="3">1C</option>
+                            <option value="4">1D</option>
+                            <option value="5">2A</option>
+                            <option value="6">2B</option>
+                            <option value="7">2C</option>
+                            <option value="8">2D</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="buttons">
+                    <input type="hidden" name="form_id" value="1053033" />
+                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Envoyer" />
+                </li>
+            	<div id="errormessage"></div>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\bin\Debug\TDDMorpion.dll" total="6" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-09-09" time="14:57:05">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.4961" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0" machine-name="HERMES" user="fabien" user-domain="INTRANET" />
+  <culture-info current-culture="fr-FR" current-uiculture="fr-FR" />
+  <test-suite type="Assembly" name="C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\bin\Debug\TDDMorpion.dll" executed="True" result="Success" success="True" time="0.209" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="TDDMorpion" executed="True" result="Success" success="True" time="0.176" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="MorpionTest" executed="True" result="Success" success="True" time="0.172" asserts="0">
+            <results>
+              <test-case name="TDDMorpion.MorpionTest.TestCreateBoard" executed="True" result="Success" success="True" time="0.074" asserts="2" />
+              <test-case name="TDDMorpion.MorpionTest.TestFirstMarque" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+              <test-case name="TDDMorpion.MorpionTest.TestMarqueAtOccupiedPosition" executed="True" result="Success" success="True" time="0.018" asserts="0" />
+              <test-case name="TDDMorpion.MorpionTest.TestOutOfRangeColumn" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+              <test-case name="TDDMorpion.MorpionTest.TestOutOfRangeRow" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+              <test-case name="TDDMorpion.MorpionTest.TestSetFirstPlayer" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,66 @@
+<HTML>
+<TITLE>Triangle de Pascal...</TITLE>
+<HEAD>
+<STYLE TYPE="text/css">
+TD {
+  color:#000000;font-size:15px;
+  font-family:Verdana;
+  text-align:center;
+  background-color:#c0c0f0;
+  width:40px
+  }
+</STYLE>
+<SCRIPT>
+//----------------------------------
+// Entée  : niv_ hauteur du triangle
+// Sortie : Tableau des valeurs
+//----------------------------------
+function TrianglePascal(niveauT){
+  var i, k;
+  var T_Result = new Array();
+  
+  //-- Création tableau multidimensionnel
+  for( i =0; i< niveauT; i++){
+    T_Result[i] = new Array();
+    T_Result[i][0]= 1; // 1st colonne à 1
+  }
+  //-- Calcul des Valeurs
+  for( i=1; i< niveauT; i++){
+    for( k =1; k < i; k++){
+      T_Result[i][k] = T_Result[i-1][k-1] + T_Result[i-1][k];
+    }
+    //-- Dernière colonne à 1
+    T_Result[i][k] = 1;
+  }
+  return( T_Result);
+}
+//-----------------------------
+// Entrée : Tableau des valeurs
+// Sortie : Affichage Ecran
+//-----------------------------
+function ShowTriangle( tableauTP ){
+  var i, k;
+  var Niv  = tableauTP.length;
+  var Html = 'Triangle de Pascal à ' +Niv +' niveaux...';
+  //-- Affichage des Valeurs
+  Html += '<TABLE BORDER=0 CELLSPACING =4>';
+  for( i in tableauTP){
+    Html += '<TR>';
+    for( k in tableauTP[i]){
+      Html += '<TD>' +tableauTP[i][k] +'</TD>';
+    }
+    Html += '</TR>';
+  }
+  Html += '</TABLE>That\'s All Folks !';
+  document.write( Html);
+}
+//=============================
+//=============================
+var T_Pascal = new Array();
+T_Pascal = TrianglePascal(15);
+ShowTriangle( T_Pascal);
+</SCRIPT>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

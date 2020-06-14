@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Arbre js</title>
+        <style>
+            body{ margin:0px; padding:0px; background-color:rgb(120,120,120); font-size:100%;}
+            .show{margin-left:20px;}
+ 
+            .liste { margin-left:-4px; list-style: none;}
+            .object{ background-color:rgb(200,150,200); }
+            .function{ background-color:rgb(180,180,180); }
+            .functionTexte{ background-color:white; margin-left:20px;}
+            .string{ background-color:rgb(150,200,150); }
+            .number{ background-color:rgb(210,160,150); }
+            .boolean{ background-color:rgb(100,130,140); }
+        </style>
+        <script type="text/javascript" src="../javascript/allFunctions.js"></script>
+        <script type="text/javascript">
+            function show(e, p_objet, elem){
+                var child;
+                if(typeof p_objet == 'function'){
+                    child =  create({tagName:'div', className:'functionTexte'});
+                    child.innerHTML = parseFunctionToHtml(p_objet.toString());
+                }else{
+                    child = create({tagName:'ul', className:'liste'});
+                    for(var prop in p_objet){
+                        try{
+                            if(prop && p_objet[prop]!==window){
+ 
+                                createChild(p_objet[prop], prop, child);
+                            }
+                        }catch(ex){
+                            log(ex.message + " sur la propriété : "+prop);
+                        }
+                    }
+                }
+                if(child)elem.appendChild(child);
+            }
+ 
+            function parseFunctionToHtml(functionTexte){
+                var parseHtml = functionTexte.replace(new RegExp("\\n", "g"),"<br/>");
+                var regExpFonction = new RegExp("function [a-zA-Z]*[0-9]* \(.*\) \{","g");
+                return parseHtml;
+            }
+ 
+            function createChild(instance, name, parentNode){
+                    var li = create({tagName:'li',className: typeof instance});
+                    var hasChild = false;
+                    isTypeSimple = (typeof instance == 'string' || typeof instance == 'boolean' || typeof instance == 'number');
+                    if(!isTypeSimple){
+                        if(typeof instance == 'object'){
+                            for(var prop in instance){
+                                hasChild = true;
+                                break;
+                            }
+                        }else{
+                            hasChild = true;
+                        }
+                        if(hasChild){
+                            var img =  create({tagName:'img',style:'width:16px;height:16px;vertical-align:text-top; cursor:pointer;border: 1px solid white;'});
+                            img.src = "../img/plus.png";
+                            img.onmouseover = overImg;
+                            img.onmouseout = outImg;
+                            img.onclick = function(e){showHideProperties(e, instance)};
+                            li.appendChild(img);
+                        }
+                    }
+                    var value = (isTypeSimple)?"value=" + instance:value = "type=" + typeof instance;
+                    var texteNode = document.createTextNode(' name='+name + " => " + value);
+                    li.appendChild(texteNode);
+                    parentNode.appendChild(li);
+            }
+ 
+            function log(text){
+                document.getElementById('logger').innerHTML += text + "<br/>";
+            }
+ 
+            function showHideProperties(evt, p_object){
+                window.action = "lecture des propriété de " + p_object;
+                var elem = evt.target;
+                if(!elem.isLoaded){
+                        show(evt,p_object,elem.parentNode);
+                        elem.isLoaded=true;
+                        elem.onmouseover=overImg;
+                        elem.onmouseout=outImg;
+                }
+                openCloseImg(elem);
+            }
+ 
+            function openCloseImg(elem){
+                if(elem.parentNode.lastElementChild == null){
+                    removeElement(elem);
+                    return;
+                }
+                if(elem.isOpen){
+                    elem.setAttribute('src', '../img/plus.png');
+                    elem.parentNode.lastElementChild.style.display = "none";
+                    elem.isOpen = false;
+                }else{
+                    elem.setAttribute('src', '../img/moins.png');
+                    elem.parentNode.lastElementChild.style.display = "";
+                    elem.isOpen = true;
+                }
+            }
+ 
+            function overImg(){
+                if(this.isOpen){
+                    this.src = '../img/moins_over.png';
+                }else{
+                    this.src = '../img/plus_over.png';
+                }
+            }
+ 
+            function outImg(){
+                if(this.isOpen){
+                    this.src = '../img/moins.png';
+                }else{
+                    this.src = '../img/plus.png';
+                }
+            }
+ 
+ 
+        </script>
+    </head>
+    <body>
+        <div class="show">
+                <ul class="liste">
+                    <li class="object">
+                            <img width="16" height="16" onmouseover="this.src='../img/plus_over.png'" onmouseout="this.src='../img/plus.png'" style="vertical-align:text-top; cursor:pointer;border: 1px solid white;" src="../img/plus.png" onclick="showHideProperties(event,window);" />
+                            window
+                        </div>
+                    </li>
+                </ul>
+        </div>
+        <div id="logger" style="color:red; background-color:white;"></div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+	<script src="clickme.js"></script>
+	<script src="clickmeKL.js"></script>
+</head>
+<body>
+	<h1><div id="clickme">CLICK ME</div></h1>
+	
+	<div id="ici"></div>
+	
+	<button onclick="resetForm('monForm')">neutraliseur</button>
+
+	<br><IMG src='chouette.jpg' width='25px' onclick="switchFormVisibility('monForm')" />
+	<br><input type="text" name="url"> 
+	<input type="submit" label="OK" submit="nav('google.fr')">
+
+	
+	<FORM id="monForm">
+		<select id="idcars" name="cars">
+		  <option value="volvo">Volvo</option>
+		  <option value="saab">Saab</option>
+		  <option value="fiat">Fiat</option>
+		  <option value="audi">Audi</option>
+		</select>
+		<input id="idbrowsers" list="browsers">
+		<datalist id="browserslist">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+		<br>
+		<textarea name="message" rows="3" cols="40">The cat was playing in the garden.</textarea>
+
+	</FORM>
+
+		
+	<script>init();initKL();</script>
+	
+</body>
+</html>

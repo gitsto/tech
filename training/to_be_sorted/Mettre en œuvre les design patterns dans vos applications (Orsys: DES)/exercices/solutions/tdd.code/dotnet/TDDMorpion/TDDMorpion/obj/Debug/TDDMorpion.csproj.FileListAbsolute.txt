@@ -1,0 +1,7 @@
+C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\bin\Debug\TDDMorpion.dll
+C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\bin\Debug\TDDMorpion.pdb
+C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\bin\Debug\nunit.framework.dll
+C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\bin\Debug\nunit.framework.xml
+C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\obj\Debug\ResolveAssemblyReference.cache
+C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\obj\Debug\TDDMorpion.dll
+C:\formation\orsys\DES.5j\basiques\TDDMorpion\TDDMorpion\obj\Debug\TDDMorpion.pdb

@@ -1,0 +1,22 @@
+1. sur le poste developpeur : 
+
+1.1. installer les packages pour nfs
+$ sudo apt-get install nfs-kernel-server nfs-common
+1.2. editer le fichier 
+$ sudo emacs /etc/exports 
+et ajouter la ligne suivante a la fin: 
+/path-to-eclipse-wokspace       *(ro,all_squash,sync,no_subtree_check,insecure)
+1.3. redemarrer nfs-serveur 
+$ sudo /etc/init.d/nfs-kernel-server restart 
+
+2. sur le turret
+2.1. se connecter en root
+ssh root@turret_ip 
+verifier si le client nfs est active
+$ grep -i ENABLE_NFSCLIENT /config/sysconfig/services
+il est possible que la valeur change apres mise a jour de la version topsy.
+
+1.2. creer un point de montage sur le repertoire partage nfs /path-to-eclipse-wokspace (vu en 1.2)
+
+ip_poste_dev=`hostname -i`
+$ mount -r $ip_poste_dev:/path-to-eclipse-wokspace /mnt

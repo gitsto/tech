@@ -1,0 +1,46 @@
+<!doctype html>
+<HTML>
+<TITLE>Chouettes...</TITLE>
+<HEAD>
+<STYLE TYPE="text/css">
+TD {
+  color:#FFFFFF;
+  font-size:15px;
+  font-family:Verdana;
+  text-align:center;
+  background-color:#000000;
+  width:40px
+  }
+</STYLE>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<SCRIPT>
+
+	fileAccess = function(e) {
+		fichier = e.target.files[0];
+		reader = new FileReader();
+		// l'event onload est declenché par le readAsText qui fait la lecture jusqu'à la fin du fichier.
+		reader.onload = function(evt) {
+			console.log(evt.target.result);
+		}
+		reader.readAsText(fichier);
+		//reader.readAsDataUrl(fichier);
+	}
+
+	$(#idFile).change(fileAccess);
+
+</SCRIPT>
+
+
+</HEAD>
+<BODY>
+<p>aller chercher un fichier et lire son contenu dans la console
+<FORM>
+<input id="idFile" type="file">
+</FORM>
+
+</BODY>
+
+
+</HTML>

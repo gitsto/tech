@@ -1,0 +1,10 @@
+
+créer plc
+iptables -I INPUT 1 -i bond0 -m statistic --mode random --probability 0.10 -j DROP ; iptables -L -v
+
+reset
+iptables -D INPUT -i bond0 -m statistic --mode random --probability 0.10 -j DROP ; iptables -L -v
+
+
+
+

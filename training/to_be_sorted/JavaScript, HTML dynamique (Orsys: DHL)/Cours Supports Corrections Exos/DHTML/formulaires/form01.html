@@ -1,0 +1,51 @@
+<html>
+<head>
+<script>
+	function selectChanged(y) {
+		
+		f = document.getElementById("monform");
+		t = document.getElementById("txx1");
+		
+		o = document.getElementsByTagName("option");
+		for (i=0; i <5 ; i++) o[i].value = o[i].style.color="#D0D0D0";
+		t.value = "";
+		//f.reset();
+	}
+	function textChanged(x) {
+		alert("le texte a ete modifié");
+	}
+	
+	
+	function controleLeFormulaire(f) {
+		alert("le texte a ete modifié");
+	}
+</script>
+</head>
+<body>
+<form onSubmit="controleLeFormulaire(this)" id="monform">
+<!-- http://www.w3schools.com/html/html_form_elements.asp -->
+
+<input name="nom" value="Orsys">
+
+<select name="cars" onClick="selectChanged(this)" onChange="selectChanged(this)" >
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+
+<textarea id="txx1" name="message" rows="10" cols="30" onChange="textChanged(this)">
+The cat was playing in the garden.
+</textarea>
+
+<input list="browsers">
+<datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>
+</body>
+</html>

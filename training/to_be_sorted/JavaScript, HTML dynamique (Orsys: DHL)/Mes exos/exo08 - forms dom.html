@@ -1,0 +1,63 @@
+<!doctype html>
+<HTML>
+<TITLE>Chouettes...</TITLE>
+<HEAD>
+<STYLE TYPE="text/css">
+TD {
+  color:#FFFFFF;
+  font-size:15px;
+  font-family:Verdana;
+  text-align:center;
+  background-color:#000000;
+  width:40px
+  }
+</STYLE>
+
+<SCRIPT>
+function onChange(obj) {
+	imgTemp = obj.src;
+	obj.src = obj.getAttribute("newsrc");
+	obj.setAttribute("newsrc", imgTemp);
+	f = document.getElementById("monForm");
+	//console.log(f.id);
+
+	o = document.getElementsByTagName("option");
+	console.log(o.value);
+
+	
+	var image = document.createElement("IMG");
+	image.setAttribute("src", "chouette.jpg")
+	image.setAttribute("width", "5%")
+	f.appendChild(image);	
+	//f.reset();
+}
+</SCRIPT>
+
+
+</HEAD>
+<BODY>
+<p>Quelques elements de formulaire
+<FORM id="monForm">
+<select id="idcars" name="cars" onChange="onChange(this)" >
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+<input id="idbrowsers" list="browsers">
+<datalist id="browserslist">
+	<option value="Internet Explorer">
+	<option value="Firefox">
+	<option value="Chrome">
+	<option value="Opera">
+	<option value="Safari">
+</datalist>
+<br>
+<textarea name="message" rows="3" cols="40">The cat was playing in the garden.</textarea>
+<br><IMG src='chouette.jpg' newsrc='chouetteDrole.jpg' width='250px' onmouseover='onChange(this)' onmouseout='onChange(this)' />
+</FORM>
+
+</BODY>
+
+
+</HTML>

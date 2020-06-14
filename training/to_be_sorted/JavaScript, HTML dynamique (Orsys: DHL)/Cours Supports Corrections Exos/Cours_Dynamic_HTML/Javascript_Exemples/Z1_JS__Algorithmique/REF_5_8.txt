@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+FORMATION : Denis GAUDARE
+DATE DE CREATION : 01/09/2014
+DATE DE DERNIERE MODIFICATION : 16/08/2015
+OBJET : Ecrire l’algorithme permettant la saisie de la réponse à la question "Aimez-vous l’informatique (O/N) ?"
+avec un affichage d’un message d’erreur en cas de mauvaise réponse (renouvellement de la question jusqu'à ce que la réponse soit "O" ou "N").
+Utilisez pour ce traitement la structure itérative while et différencier les deux cas par un test après la sortie de l’itération.
+-->
+
+<!-- Début script HTML -->
+<html>
+
+	<!-- Début entête script HTML -->
+	<head>
+
+		<!-- Balise meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Titre du script HTML -->
+		<title>REF_5_8</title>
+
+	</head>
+
+	<!-- Début section body du script HTML -->
+	<body>
+
+		<!-- Titre du traitement -->
+		<h1>ORSYS - JavaScript - Exercice REF_5_8</h1>
+
+		<!-- Début script JavaScript -->
+		<script>
+		
+
+
+		</script>
+
+		<!-- Affichage du code source -->
+		<br />
+		<br />
+		<br />
+		<center>
+			<a href="JavaScript:window.location='view-source:' + window.location"> Code source </a>
+		</center>
+
+	</body>
+
+</html>

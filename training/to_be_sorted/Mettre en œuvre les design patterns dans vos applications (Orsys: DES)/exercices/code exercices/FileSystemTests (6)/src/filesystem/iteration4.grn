@@ -1,0 +1,68 @@
+<uml>
+   <greenVersion="30500"/>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.intf{IUniteLogique.java[IUniteLogique"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="44"/>
+      <y="57"/>
+   </type>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.shared.objetsmetier.intf{IFormat.java[IFormat"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="75"/>
+      <y="371"/>
+   </type>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.impl{UniteLogique.java[UniteLogique"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="507"/>
+      <y="16"/>
+   </type>
+   <type>
+      <name="=com.valtech.adp.filesystem/testsrc<filesystem.frontend.objetsmetier{FormatPourTest.java[FormatPourTest"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="74"/>
+      <y="549"/>
+   </type>
+   <note>
+      <text="DP Strategy: AbstractStrategy
+method formater"/>
+      <height="39"/>
+      <width="158"/>
+      <x="313"/>
+      <y="325"/>
+   </note>
+   <note>
+      <text="DP Strategy: ConcreteStrategy"/>
+      <height="24"/>
+      <width="162"/>
+      <x="392"/>
+      <y="516"/>
+   </note>
+   <note>
+      <text="DP Strategy: Context"/>
+      <height="27"/>
+      <width="116"/>
+      <x="353"/>
+      <y="128"/>
+   </note>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.impl{UniteLogique.java[UniteLogique"/>
+      <targetType="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.intf{IUniteLogique.java[IUniteLogique"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=com.valtech.adp.filesystem/testsrc<filesystem.frontend.objetsmetier{FormatPourTest.java[FormatPourTest"/>
+      <targetType="=com.valtech.adp.filesystem/src<filesystem.shared.objetsmetier.intf{IFormat.java[IFormat"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+</uml>
+

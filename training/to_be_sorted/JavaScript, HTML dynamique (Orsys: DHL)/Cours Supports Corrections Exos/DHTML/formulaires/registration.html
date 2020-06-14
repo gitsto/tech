@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="registration.css">
+<script src="registration.js"></script>
+</head>
+<body>
+<div id="registration">
+<h2>Creer votre Compte</h2>
+<div id="formresult"></div>
+<!-- novalidate desactive la validation HTML5 -->
+<form id="RegisterUserForm" action="" method="post" novalidate="true">
+<fieldset>
+<label for="name">Nom</label> <input class="text" id="name" type="text" name="name" value="" />
+<label for="tel">Numero Tel</label> <input class="text" id="tel" type="tel" name="tel" value="" />
+<label for="email">Email</label> <input class="text" id="email" type="email" name="email" value="" />
+<label for="password">Password</label> <input class="text" id="password" type="password" name="password" />
+ 
+<input id="acceptTerms" type="checkbox" name="acceptTerms" />
+ <label for="acceptTerms"> J'accepte <a>les termes et conditions</a></label>
+ <br>
+<button id="registerNew" type="submit">Enregistrer</button></fieldset>
+</form>
+</div>
+</body>
+<script>initForms()</script>
+</html>

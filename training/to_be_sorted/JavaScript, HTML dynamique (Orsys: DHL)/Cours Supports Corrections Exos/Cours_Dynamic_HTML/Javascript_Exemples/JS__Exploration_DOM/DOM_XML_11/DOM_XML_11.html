@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+L via DOM (fichier voitures.xml)
+-->
+
+<!-- Début script HTML -->
+<html>
+
+	<!-- Début entête script HTML -->
+	<head>
+
+		<!-- Balise meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Titre du script HTML -->
+		<title>DOM_XML_11</title>
+
+	</head>
+
+	<!-- Début section body du script HTML -->
+	<body>
+
+		<!-- Titre du traitement -->
+		<h1>ORSYS - JavaScript - DOM_XML_11</h1>
+
+		<!-- Début script JavaScript -->
+		<script type="text/javascript">
+		
+			/* Affichage du L de début de table */
+			document.write("<table border='1'>");
+			/* Mise en place de la ligne des intitulé de colonnes */
+			document.write("<tr>");
+			document.write("<td>");
+			document.write("Marque");
+			document.write("</td>");
+			document.write("<td>");
+			document.write("Modèle");
+			document.write("</td>");
+			document.write("</tr>");
+			/* Parcours de la liste des voitures */
+			var voiture = xmlDoc.getElementsByTagName("voiture");
+			for (i = 0; i < voiture.length; i++) {
+				/* Mise en place d'un nouvelle ligne dans le table HTML */
+				document.write("<tr>");
+				/* Ouverture de la 1ère colonne (marque de la voiture) */
+				document.write("<td>");
+				/* Ecriture de la marque de la voiture  */
+				document.write(voiture[i].
+				getElementsByTagName("marque")[0]
+				.childNodes[0].nodeValue);
+				/* Fermeture de la 1ère colonne */
+				document.write("</td>");
+				/* Ouverture de la 2ème colonne (modèle de la voiture) */
+				document.write("<td>");
+				/* Ecriture du modèle de le voiture */
+				document.write(voiture[i]
+				.getElementsByTagName("modele")[0]
+				.childNodes[0].nodeValue);
+				/* Fermeture de la 2ème colonne */
+				document.write("</td>");
+				/* Fermeture de la ligne dans le table HTML */
+				document.write("</tr>");
+			}
+			/* Balise HTML de fin de table */
+			document.write("</table>");
+
+		</script>
+
+		<!-- Affichage du code source -->
+		<br />
+		<br />
+		<br />
+		<center>
+			<a href="JavaScript:window.location='view-source:' + window.location"> Code source </a>
+		</center>
+
+	</body>
+
+</html>

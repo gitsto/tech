@@ -1,0 +1,1 @@
+package philosophe.thread0;public class LanceurPhilo0 {		public static void main(String[] args) {		int nbPhil = 5;		if (args.length > 0) Integer.parseInt(args[0], 10);		Philosophe0[] phil;		phil = new Philosophe0[nbPhil];				for (int i = 0; i < nbPhil; i++) phil[i] = new Philosophe0(i);		for (int i = 0; i < nbPhil; i++) phil[i].start();	}}

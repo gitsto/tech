@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	
+</head>
+
+<body>
+
+	<script> 
+		function afficherSurfaceCercle() {
+			var r = parseFloat(prompt("Saisir votre rayon : "));
+			return r*r*3.14
+		}
+		var afficherSurfaceCercleAvecRayon = function (rayon) {
+			var r = parseFloat(rayon);
+			surface = r*r*3.14;
+			//alert("Pour un rayon de " + rayon + " la surface est " + surface);
+			console.log("dans la console : " + surface);
+			return surface;
+		}
+	</script> 
+	
+	<p>Cliquez sur le bouton 
+
+	<button onclick='alert("Surface = " + afficherSurfaceCercle())'>
+	Lancer
+	</button>
+	<button onclick='afficherSurfaceCercleAvecRayon(10)'>
+	Lancer 10
+	</button>
+	
+</body>
+</html>
+

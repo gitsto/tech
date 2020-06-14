@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+FORMATION : Denis GAUDARE
+DATE DE CREATION : 01/09/2014
+DATE DE DERNIERE MODIFICATION : 16/08/2015
+OBJET : Soit le tableau TB à 1 dimension comportant 10 éléments de type caractère. Réaliser les traitements suivants :
+- Mise à vide des 10 cases du tableau (boucle Pour utilisable)
+- Saisie d'un mot au clavier (LAVAL par exemple)
+- Stockage du mot dans le tableau TB à raison d'une lettre par case (boucle Pour utilisable)
+- Détermination d’un cas de palindrome ou pas
+-->
+
+<!-- Début script HTML -->
+<html>
+
+	<!-- Début entête script HTML -->
+	<head>
+
+		<!-- Balise meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Titre du script HTML -->
+		<title>REF_6_11</title>
+
+	</head>
+
+	<!-- Début section body du script HTML -->
+	<body>
+
+		<!-- Titre du traitement -->
+		<h1>ORSYS - JavaScript - Exercice REF_6_11</h1>
+
+		<!-- Début script JavaScript -->
+		<script>
+		
+
+		</script>
+
+		<!-- Affichage du code source -->
+		<br />
+		<br />
+		<br />
+		<center>
+			<a href="JavaScript:window.location='view-source:' + window.location"> Code source </a>
+		</center>
+
+	</body>
+
+</html>

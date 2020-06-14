@@ -1,0 +1,13 @@
+!SESSION 2011-09-08 15:11:57.808 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.modelgoon.plugin 1 0 2011-09-08 15:57:50.049
+!MESSAGE Java project found
+
+!ENTRY org.modelgoon.plugin 1 0 2011-09-08 16:00:50.335
+!MESSAGE Java project found

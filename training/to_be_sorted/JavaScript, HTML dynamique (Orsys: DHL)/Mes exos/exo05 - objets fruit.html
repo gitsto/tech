@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Exercice Navigator</title>
+		<script src="lib.js">
+		</script>		
+	</head>
+<body>
+
+<p> Exemple :
+	<script>
+	
+		/*
+		couleurRouge = function(codeCouleur) {
+			return "Rouge";
+		}
+	*/
+	
+	init = function(codeCouleur, indice) {
+		if (indice < 0) {
+			document.write("Indice negatif...<br>");
+		} 
+			//var couleurs = ["R", "V", "B"];
+		switch (codeCouleur) {
+			case 'R':
+				this.couleur = "Rouge";
+				break;
+			case 'V':
+				this.couleur = "Vert";
+				break;
+			case 'B':
+				this.couleur = "Bleu";
+				break;
+			default: 
+				this.couleur = "Inconnue";
+		}
+		if (indice < 0) {
+			this.prix = 0;
+		} else {
+			this.prix = (parseFloat(indice)*1000)/0.94;
+		}
+	}
+
+	var monFruit = new init("D", 20);
+	document.write("Fruit de couleur " + monFruit.couleur + ", dont le prix est: " + monFruit.prix + "<br>");
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+
+JS & JQUERY
+
+http://www.xul.fr/ecmascript/
+http://www.jquery-fr.com/
+http://www.eclaireur.net/technique/scripts-exemples-ressources-developper-jquery/
+
+
+RECURSIF
+http://jsfunctionnal.blogspot.fr/2009/01/arbres-parcours-du-dom.html
+http://www.xul.fr/dom/nodelist.php
+
+
+ANGULAR
+https://www.tinci.fr/blog/apprendre-angular-en-un-jour-le-guide-ultime/
+
+
+

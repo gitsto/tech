@@ -1,0 +1,43 @@
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	
+	<script>
+	
+		function init() {
+			
+			var sel = document.querySelector("select");
+			sel.addEventListener('change', function(e) {appelajax(e)}, false);
+		}
+		
+		var appelajax = function(evt) {
+			s = evt.target || evt.srcElement;
+			o = s.options[s.selectedIndex];
+			v = o.value;
+			
+			req = new XmlHttpRequest():
+			req.onreadystatechange = function() {
+				if (req.readystate == 4 && req.status==200) {
+					var temperature = req.responseText;
+					querySelector("#temperature").innerHTML = temperature;
+				}
+			}
+		}
+
+	</script>
+</head>
+
+<body onload="init()">
+
+<select id="countries">
+	<option value="toronto">Toronto/Canada</option>
+	<option value="paris">Paris/France</option>
+	<option value="boston">Boston/USA</option>
+	<option value="oulanbator">Oulan Bator/Mongolie</option>
+</select>
+
+<span id="temperature">0°C</span>
+
+</body>
+</html>

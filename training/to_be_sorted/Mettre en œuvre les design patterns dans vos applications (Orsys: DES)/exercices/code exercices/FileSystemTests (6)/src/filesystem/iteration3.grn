@@ -1,0 +1,33 @@
+<uml>
+   <greenVersion="30500"/>
+   <type>
+      <name="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.impl{Disque.java[Disque"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="156"/>
+      <y="56"/>
+   </type>
+   <type>
+      <name="=com.valtech.adp.filesystem/testsrc<filesystem.frontend.objetsmetier{DisquePourTest.java[DisquePourTest"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="78"/>
+      <y="199"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=com.valtech.adp.filesystem/testsrc<filesystem.frontend.objetsmetier{DisquePourTest.java[DisquePourTest"/>
+      <targetType="=com.valtech.adp.filesystem/src<filesystem.frontend.objetsmetier.impl{Disque.java[Disque"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <note>
+      <text="DP Singleton
+method getInstance"/>
+      <height="35"/>
+      <width="121"/>
+      <x="308"/>
+      <y="88"/>
+   </note>
+</uml>
+

@@ -1,0 +1,46 @@
+<HTML>
+<TITLE>Triangle de Pascal...</TITLE>
+<HEAD>
+<STYLE TYPE="text/css">
+TD {
+  color:#000000;font-size:15px;
+  font-family:Verdana;
+  text-align:center;
+  background-color:#c0c0f0;
+  width:40px
+  }
+</STYLE>
+<SCRIPT>
+function Pascal(n, r) 
+{	
+	if (n > 1 && r > 0 && r < n) 
+		return Pascal(n - 1, r - 1) + Pascal(n - 1, r) 
+	else return 1; 
+} 
+
+//-----------------------------
+// Entrée : Tableau des valeurs
+// Sortie : Affichage Ecran
+//-----------------------------
+function ShowTriangle( niveau){
+  var i, k;
+  var Html = 'Triangle de Pascal RECURSIF à ' + niveau +' niveaux...';
+  //-- Affichage des Valeurs
+  Html += '<TABLE BORDER=0 CELLSPACING =4>';
+  for ( i=0 ; i< niveau; i++ ){
+    for ( k =0 ; k <= i; k++ ){
+      Html += '<TD>' + Pascal(i,k) +'</TD>';
+    }
+    Html += '</TR>';
+  }
+  Html += '</TABLE>That\'s All Folks !';
+  document.write( Html);
+}
+//=============================
+//=============================
+ShowTriangle(10);
+</SCRIPT>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

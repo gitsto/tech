@@ -1,0 +1,40 @@
+﻿La génération a démarré 07/07/2011 08:59:00.
+     1>Projet "C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\mvp-ms\mvp-ms.vcxproj" sur le nœud 2 (rebuild cible(s)).
+     1>_PrepareForClean:
+         Suppression du fichier "Debug\mvp-ms.lastbuildstate".
+       InitializeBuildStatus:
+         Mise à jour de l'horodatage "Debug\mvp-ms.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt IViewer.cpp main.cpp Presenter.cpp UIViewer.cpp
+         UIViewer.cpp
+         Presenter.cpp
+         main.cpp
+         IViewer.cpp
+         Génération de code en cours...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\mvp-ms.exe.embed.manifest.res" Debug\mvp-ms_manifest.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\Debug\mvp-ms.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\mvp-ms.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\Debug\mvp-ms.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\Debug\mvp-ms.lib" /MACHINE:X86 "Debug\mvp-ms.exe.embed.manifest.res"
+         Debug\IViewer.obj
+         Debug\main.obj
+         Debug\Presenter.obj
+         Debug\UIViewer.obj
+       Manifest:
+         Suppression du fichier "Debug\mvp-ms.exe.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\mvp-ms.exe.embed.manifest" /manifest "Debug\mvp-ms.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\mvp-ms.exe.embed.manifest.res" Debug\mvp-ms_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\Debug\mvp-ms.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\mvp-ms.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\Debug\mvp-ms.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\Debug\mvp-ms.lib" /MACHINE:X86 "Debug\mvp-ms.exe.embed.manifest.res"
+         Debug\IViewer.obj
+         Debug\main.obj
+         Debug\Presenter.obj
+         Debug\UIViewer.obj
+         mvp-ms.vcxproj -> C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\Debug\mvp-ms.exe
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\mvp-ms.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\mvp-ms.lastbuildstate".
+     1>Génération du projet "C:\formation\valtech\ADP-2.0.0-Fr-Printer\CourseBook\exerciceMVP\mvp-ms\mvp-ms\mvp-ms.vcxproj" terminée (rebuild cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:07.09

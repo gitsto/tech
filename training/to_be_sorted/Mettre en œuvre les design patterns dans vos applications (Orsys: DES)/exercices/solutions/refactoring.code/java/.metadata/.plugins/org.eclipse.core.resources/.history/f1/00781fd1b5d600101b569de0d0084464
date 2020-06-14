@@ -1,0 +1,31 @@
+
+
+import java.util.*;
+import static org.mockito.Mockito.*;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+		
+		//You can mock concrete classes, not only interfaces
+		 List mockedList = mock(List.class);
+		 
+		 //stubbing
+		 when(mockedList.get(0)).thenReturn("first");
+		
+		 
+		 //following prints "first"
+		 System.out.println(mockedList.get(0));
+		 
+		 //following throws runtime exception
+		 System.out.println(mockedList.get(1));
+		 
+		 //following prints "null" because get(999) was not stubbed
+		 System.out.println(mockedList.get(999));
+		  
+	
+
+	}
+
+}
