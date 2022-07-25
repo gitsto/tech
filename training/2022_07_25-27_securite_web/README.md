@@ -13,6 +13,7 @@
 * Connaître les attaques qui existent (type, outils et commandes qui permettent de les executer), permet de mieux se défendre
 * La confiance, n'exclu pas la vérification; exemple une personne de ta famille te donne de l'argent, mais tu recompte à part :)
 * Le niveau de sécurité élevé, implique une baisse des performances
+* 
 
 ### Astuces
 
@@ -67,7 +68,9 @@ Manière moins simple: aller en ftp, ou changer le type de fichier dans l'entêt
 
 ### Utilitaire protocoles
 
-SCAPY terminal python pour manipuler des protocoles facilement: <https://github.com/secdev/scapy>
+* SCAPY terminal python pour manipuler des protocoles facilement: <https://github.com/secdev/scapy>
+* Chrome ou firefox : http_header_live pour lire les échanges de requêtes  
+exemple http://www.google.fr (on observe qu'il redirige sur https, qu'il propose du HTTP/2, ...)
 
 ## Protocoles
 
