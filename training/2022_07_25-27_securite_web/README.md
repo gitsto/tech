@@ -3,7 +3,7 @@
 ## Arabe
 
 * Haram: Mauvais
-* Hallal: opposé de Bien 
+* Hallal: opposé de Haram, donc Bien 
 * Khallas: Terminé
 * Abadan: Jamais
 
@@ -15,6 +15,7 @@
 * Le niveau de sécurité élevé, implique une baisse des performances
 * Le principe du "moindre privilège" chaque personne/composant doit avoir uniquement les privilèges nécessaires pour exercer son activité
 * Raisonner avec un niveau d'abstraction élevé pour mieux décliner la sécurité au cas particuliers
+* 780 milliards de mails enoyé par jour, 97% sont des spams, le phishing est le plus dangereux car il utilise la messagerie pour rediriger vers des sites malicieux
 
 ### Astuces
 
@@ -55,6 +56,10 @@ Site, non commercial, pour référencer les niveau de sécurité etc...
 ![](img/web_servers_graph.png)
 
 ## Outils, astuces
+
+### Distribution Linux
+
+[Kali](https://www.kali.org/) : Distribution Linux qui contient une multitudes d'outils pour faire des tests de penetration afin de tester la sécurité de ses applications
 
 ### Antivirus
 
@@ -164,7 +169,7 @@ Une de plus redoutable depuis ces 30 dernières années
 
 ## Travaux Pratique
 
-commande pour créer une connexion TLS avec un seerveur
+commande pour créer une connexion TLS avec un serveur
 
 ```shell
 OpenSSL> s_client -tls1_3 -host www.google.fr -port 443
@@ -245,10 +250,89 @@ nikto -h https://www.orsys.fr
 ```
 
 
+
+### Exercice 2 : attaques sur la logique applicative
+
+préparation
+* installer et lancer xampp sous windows avec apache utilisant les ports 8080 et 8443 dans les fichiers de configuration httpd.conf, httpd-ssl.conf et lancer aussi mysql
+* télécharger https://github.com/digininja/DVWA déziper et installer dans le dossier `C:\xampp\htdocs` et se connecter à l'url `http://localhost:8080/DVWA`
+
+l'application DVWA propose des exemples de formulaires web avec différent niveau de faille, ci-dessous une attaque XSS qui affichera le cookie en le passant dans le champ 'Name'  
+Utiliser le bouton 'View Source' pour observer le code de la page et 'Compare' pour voir les version différentes Low, Medium et High.
+
+![](img/dvwa.png)
+
+
+
+Exemple de l'utilisation de l'utilitaire john pour casser les mots de passes linux 
+```
+┌──(root㉿kali)-[/etc]
+└─# unshadow passwd shadow > resultats
+Created directory: /root/.john  
+                                                                               
+┌──(root㉿kali)-[/etc]
+└─# john --format=crypt resultats 
+Using default input encoding: UTF-8
+Loaded 1 password hash (crypt, generic crypt(3) [?/64])
+Cost 1 (algorithm [1:descrypt 2:md5crypt 3:sunmd5 4:bcrypt 5:sha256crypt 6:sha512crypt]) is 0 for all loaded hashes
+Cost 2 (algorithm specific iterations) is 1 for all loaded hashes
+Will run 2 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+kali             (kali)     
+1g 0:00:00:00 DONE 1/3 (2022-07-27 05:04) 1.041g/s 100.0p/s 100.0c/s 100.0C/s kali..kkali1
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+```
+
+Autre exemple de test par injection SQL, au préalable lancer le xampp server avec l'app WebGoat
+
+```
+──(root㉿kali)-[/etc]
+└─# sqlmap -u "http://192.168.3.7:8080/DVWA/vulnerabilities/sqli/?id=3&Submit=Submit#" --cookie="le cookie 
+d’authentification" --current-user --current-db --dump
+
+        ___
+       __H__                                                                                                                                                                               
+ ___ ___[']_____ ___ ___  {1.6#stable}                                                                                                                                                     
+|_ -| . [.]     | .'| . |                                                                                                                                                                  
+|___|_  ["]_|_|_|__,|  _|                                                                                                                                                                  
+      |_|V...       |_|   https://sqlmap.org                                                                                                                                               
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 05:23:17 /2022-07-27/
+
+[05:23:17] [INFO] testing connection to the target URL
+got a 302 redirect to 'http://192.168.3.7:8080/DVWA/login.php'. Do you want to follow? [Y/n] y
+[05:23:32] [INFO] checking if the target is protected by some kind of WAF/IPS
+you provided a HTTP Cookie header value, while target URL provides its own cookies within HTTP Set-Cookie header which intersect with yours. Do you want to merge them in further requests? [Y/n] y
+[05:23:49] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS
+are you sure that you want to continue with further target testing? [Y/n] y
+[05:23:58] [WARNING] please consider usage of tamper scripts (option '--tamper')
+[05:23:58] [INFO] testing if the target URL content is stable
+[05:24:00] [WARNING] GET parameter 'id' does not appear to be dynamic
+[05:24:02] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[05:24:05] [INFO] testing for SQL injection on GET parameter 'id'
+[05:24:05] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[05:24:15] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+[05:24:22] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[05:24:33] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+[05:24:43] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+[05:24:54] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+[05:25:05] [INFO] testing 'Generic inline queries'
+[05:25:07] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+[05:25:16] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+[05:25:24] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+[05:25:33] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[05:25:44] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+[05:25:54] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+[05:26:05] [INFO] testing 'Oracle AND time-based blind'
+it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests?
+```
+
 ---
 
 ### Qestion
 
 * Comment tester une configuration par défaut d'une application téléchargée, méthodes ou outils ?
-
-
