@@ -16,6 +16,7 @@
 * Le principe du "moindre privilège" chaque personne/composant doit avoir uniquement les privilèges nécessaires pour exercer son activité
 * Raisonner avec un niveau d'abstraction élevé pour mieux décliner la sécurité au cas particuliers
 * 780 milliards de mails enoyé par jour, 97% sont des spams, le phishing est le plus dangereux car il utilise la messagerie pour rediriger vers des sites malicieux
+* La majorité des hackers ne connaissent pas grand chose à l'informatique, mais ils ont accès à des outils, et les utilisent comme des armes (il y a pleins de vidéos sur youtube), au final, l'impact est là.
 
 ### Astuces
 
