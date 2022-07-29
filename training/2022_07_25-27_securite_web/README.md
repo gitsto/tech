@@ -1,6 +1,13 @@
 # Securité des Applications Web
 
-## Arabe
+Formateur: [Ahmed SERHROUCHNI](mailto:as@enst.fr)
+
+## Supports
+
+* [Cours-Video](https://drive.google.com/drive/folders/1j2w8OKQ2KC_HGCf2rEt4xSEIWW-fEPe4)
+* [SER](https://drive.google.com/drive/folders/1k2TPw2z3sc7AFM5hbslNQuF10rmqOwHo)
+
+## Arabe :)
 
 * Haram: Mauvais
 * Hallal: opposé de Haram, donc Bien 
@@ -15,8 +22,19 @@
 * Le niveau de sécurité élevé, implique une baisse des performances
 * Le principe du "moindre privilège" chaque personne/composant doit avoir uniquement les privilèges nécessaires pour exercer son activité
 * Raisonner avec un niveau d'abstraction élevé pour mieux décliner la sécurité au cas particuliers
+---
 * 780 milliards de mails enoyé par jour, 97% sont des spams, le phishing est le plus dangereux car il utilise la messagerie pour rediriger vers des sites malicieux
 * La majorité des hackers ne connaissent pas grand chose à l'informatique, mais ils ont accès à des outils, et les utilisent comme des armes (il y a pleins de vidéos sur youtube), au final, l'impact est là.
+
+### Definitions
+
+Audit de sécurité: vérification de la politique de sécurité (exemple changement de mot de passes tout les 3mois,...) et ensuite prouver que la politique est appliquée
+Audit de vulnérabilité: 
+Tests de pénétration: intrusif, non fait sur la production, outil connu: metaexploit
+Audit en boite noire: se mettre dans la peau d'un hacker pour tenter l'intrusion
+Audit en boite blanche: audit du code, en général fait par le développeur, outils : 
+* Gratuits VCG, Yasca, Rips ce dernier à lancer dans le htdocs de xampp), 
+* Payants: Veracode, Sonarqube, Checkmarx
 
 ### Astuces
 
@@ -61,6 +79,7 @@ Site, non commercial, pour référencer les niveau de sécurité etc...
 ### Distribution Linux
 
 [Kali](https://www.kali.org/) : Distribution Linux qui contient une multitudes d'outils pour faire des tests de penetration afin de tester la sécurité de ses applications
+C'est une solution d'attaque, donc il faut installer les utilitaires/apps pour tester la défense
 
 ### Antivirus
 
@@ -86,6 +105,19 @@ Exemple à tester avec www.ipc.com
 exemple <http://www.google.fr> (on observe qu'il redirige sur https, qu'il propose du HTTP/2, ...)
 * [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) exemple intext: "index+of" film
 
+### Hébergeurs sécurisés
+
+[Akamai](https://www.akamai.com/) : plus grand hébergeur et fournisseurs de CDN; il offre des garanties de sécurité pour votre serveur web (présence de fronts pour contrer les attaques XSS etc...). Coûteux :)
+
+### Reverse proxy
+
+Ou aussi WAF : Web Application Firewall pour isoler les serveurs web dans un réseau local
+
+## NIDS
+
+Ne stoppe pas le traffic comme un firewall mais envoit une alerte  
+[SNORT](https://www.snort.org)
+
 ## Protocoles
 
 HTTP/3 & [QUIC](https://en.wikipedia.org/wiki/QUIC)  
@@ -107,6 +139,8 @@ FTPS = FTP over TLS
 
 [IETF](https://www.ietf.org/)
 * WG
+
+[OWASP](https://owasp.org/) : finance des projets (dev, information, librairies) pour l'aide à la sécurité exemple WebGOAT, zap (zed access proxy), ... <https://owasp.org/www-project-top-ten/>
 
 ## Attaques
 
@@ -165,8 +199,6 @@ Une de plus redoutable depuis ces 30 dernières années
 ##### Cookies
 
 [Google Scholar](https://scholar.google.com/scholar?hl=fr&as_sdt=0%2C5&q=attacks+cookies&oq=) permet d'aller chercher des synthèses d'études, exemple : [Protecting cookies from Cross Site Script attacks using Dynamic Cookies Rewriting technique](https://ieeexplore.ieee.org/abstract/document/5745998)
-
-
 
 ## Travaux Pratique
 
@@ -250,8 +282,6 @@ nikto -h https://www.orsys.fr
 
 ```
 
-
-
 ### Exercice 2 : attaques sur la logique applicative
 
 préparation
@@ -334,6 +364,13 @@ it is recommended to perform only basic UNION tests if there is not at least one
 
 ---
 
-### Qestion
+### Questions
 
-* Comment tester une configuration par défaut d'une application téléchargée, méthodes ou outils ?
+* Q: Comment tester une configuration par défaut d'une application téléchargée, méthodes ou outils ?
+* R: Analyser le traffic pour voir passer des messages vers l'extérieur (ex: wireshark) et l'expérience :)
+
+---
+
+## Autres sujets
+
+* Dans la distrib Linux Kali, le terminal utilise zsh, qui propose de l'auto-suggestion (à ne pas confondre avec auto-completion). Installation de [zsh sous windows](https://www.therdnotes.com/setup-zsh-on-windows << découverte il existe des distribution Ubuntu sur le store de Microsoft)
