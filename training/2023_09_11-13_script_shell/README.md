@@ -1,25 +1,18 @@
 # Notes sur la formation
 
 ## Intro
-
 ### Evaluation
 https://eval.orsys.fr/
 4K24R4w8a
 
 ## Historique
-
 ### Normes
 
 POSIX pour poser des bases communes entre les differents shell (csh, sh, ksh, ...)
-
 ksh88 est le point de départ de POSIX au niveau des fonctionnalités
 
-
-
 ### Execution
-
 #### Redirection
-
 < est une redirection
 
 sh < script.sh va dire de lire le fichier, et l'executer de manière interactive
@@ -31,9 +24,7 @@ sh < script.sh va dire de lire le fichier, et l'executer de manière interactive
   10144 pts/0    00:00:00 ps
 ```
 
-
 ### metacaracteres
-
 * espace: est un separateur d'arguments
 * retour chariot (entrée): est une fin de commande pour laisser le shell interpreter la ligne de commande tapée et créer le tableau
 
@@ -72,13 +63,237 @@ sys	0m17,415s
 
 ```
 
-
-
 recherche de la commande dans cette liste de répértoire stockée dans PATH
-
+```shell
 [user@lx-15-9 2023_09_11-13_script_shell]$ echo $PATH
 /home/user/.local/bin:/home/user/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin
 
 eviter de mettre '.' dedans car on peut avoir des surprises (substitution de commande, un faux ls qui existe dans un autre répértoire, et quand on y tombe... il est executé à la place du ls primitive du système)
+```
+
+### EXERCICE DU CHAPITRE 2
+
+DÉCOUVERTE DE L’ENVIRONNEMENT
+Connectez-vous sur votre machine en suivant les indications de votre formateur.  
+* Quel shell utilisez-vous ?
+```shell
+ps
+```
+* Quels sont les shells disponibles sur la machine ?  
+```shell
+cat /etc/shells  
+
+```
+
+ou  
+chsh -list
+
+* La commande chsh permet de changer le shell de connexion de l’utilisateur.
+Vérifiez que le ksh est installé sur votre machine, et demandez à votre formateur
+si il n’est pas présent. Quand il est installé, changez votre shell de connexion par
+le ksh. Regardez le fichier /etc/passwd et vérifiez que votre utilisateur a bien le
+ksh en shell par défaut. Déconnectez-vous (faire un session disconnect avec bouton) et reconnectez-vous.  
+Êtes-vous avec le ksh ?
+Oui
+
+• Remettez en place le shell d’origine.  
+MANIPULATIONS SUR LE SHELL
+
+* Affichez les alias existants sur votre machine.
+* Créez les alias suivant:
+* ll pour ls -l
+* ctmp pour cd /tmp
+* la pour ls -la
 
 
+cat /etc/passwd | grep -i '/home/user:'
+
+```shell
+touch fichier{1,2,3,4,5,6,7,8,9,10,11,12,13,14,a,b,c,d,e,f,A,B,C,D}
+```
+
+la commande date est evalué après l'affectation de variable et donc le résultat est changé à la volé
+```shell
+[user@lx-15-9 ~]$ date
+lun. 11 sept. 2023 14:35:17 CEST
+[user@lx-15-9 ~]$ LANG=C date
+Mon Sep 11 14:35:22 CEST 2023
+```
+
+
+### EXERCICE DU CHAPITRE 3
+
+SHELLS D’EXÉCUTION
+Écrivez le script suivant (exo3.sh):
+• Exécutez les commandes à la main, et notez ce que vous obtenez:
+
+[user@lx-15-9 tmp]$ cd
+echo -n 'répertoire courant: '
+pwd
+echo -n 'liste des processus: '
+ps
+cd /tmp
+echo -n 'Numéro PID du shell courant: '
+echo $$
+echo -n 'répertoire courant: '
+pwd
+
+
+répertoire courant: /home/user
+liste des processus:     PID TTY          TIME CMD
+  71678 pts/0    00:00:00 bash
+  73397 pts/0    00:00:00 ps
+Numéro PID du shell courant: 71678
+répertoire courant: /tmp
+
+
+_____________________________________________________________
+
+• Exécutez le script de 3 façons. Qu’obtenez vous ?
+```shell
+user@lx-15-9 2023_09_11-13_script_shell]$ sh exo3.sh 
+répertoire courant: /home/user
+liste des processus:     PID TTY          TIME CMD
+  71678 pts/0    00:00:00 bash
+  73481 pts/0    00:00:00 sh
+  73482 pts/0    00:00:00 ps
+Numéro PID du shell courant: 73481
+répertoire courant: /tmp
+[user@lx-15-9 2023_09_11-13_script_shell]$ 
+[user@lx-15-9 2023_09_11-13_script_shell]$ 
+[user@lx-15-9 2023_09_11-13_script_shell]$ 
+[user@lx-15-9 2023_09_11-13_script_shell]$ /bin/bash exo3.sh 
+répertoire courant: /home/user
+liste des processus:     PID TTY          TIME CMD
+  71678 pts/0    00:00:00 bash
+  73503 pts/0    00:00:00 bash
+  73504 pts/0    00:00:00 ps
+Numéro PID du shell courant: 73503
+répertoire courant: /tmp
+[user@lx-15-9 2023_09_11-13_script_shell]$ 
+[user@lx-15-9 2023_09_11-13_script_shell]$ 
+[user@lx-15-9 2023_09_11-13_script_shell]$ chmod +x exo3.sh 
+[user@lx-15-9 2023_09_11-13_script_shell]$ ./exo3.sh 
+répertoire courant: /home/user
+liste des processus:     PID TTY          TIME CMD
+  71678 pts/0    00:00:00 bash
+  73524 pts/0    00:00:00 bash
+  73525 pts/0    00:00:00 ps
+Numéro PID du shell courant: 73524
+répertoire courant: /tmp
+[user@lx-15-9 2023_09_11-13_script_shell]$ ksh < exo3.sh 
+répertoire courant: /home/user
+liste des processus:     PID TTY          TIME CMD
+  71678 pts/0    00:00:00 bash
+  74714 pts/0    00:00:00 ksh
+  74715 pts/0    00:00:00 ps
+Numéro PID du shell courant: 74714
+répertoire courant: /tmp
+
+```
+_____________________________________________________________
+• Notez le PID du shell courant dans les 4 cas:
+1. 71678
+2. 73481
+3. 73503
+4. 73524
+• Est-il différent de votre shell courant ? 
+Oui
+Pourquoi ?
+C'est un processus fils créé à chaque fois
+
+
+
+PATH
+• Quel est le fichier exécuté par la commande find ~ -print ?
+/home/user
+
+• Quels sont les répertoires parcourus lors de la recherche ?
+tous les répértoires sous ~ y compris les répertoires cachés commençants par .
+
+• Quels répertoires restaient à parcourir ?
+Je ne sais pas
+
+
+MANIPULATIONS
+• À l’aide de echo affichez
+• Aujourd’hui, cours de programmation shell
+
+```shell
+echo Aujourd\’hui, cours de programmation shell
+```
+
+• Affichez tous les fichiers commençant par u du répertoire /usr/bin
+```shell
+ls /usr/bin/u*
+```
+
+• Placez vous dans votre répertoire de connexion. Quel est le résultat de la commande
+• echo zzzz*
+
+```shell
+[user@lx-15-9 2023_09_11-13_script_shell]$ cd
+[user@lx-15-9 ~]$ echo zzzz*
+zzzz*
+```
+• Pourquoi ?
+Il n'y a pas de fichiers commençant par zzzz dans le repertoire de connexion
+
+
+• Enregistrez la liste des fichiers dont le nom se termine par sh et qui se trouvent
+dans /bin dans le fichier ~/shells.
+
+```shell
+[user@lx-15-9 ~]$ ls /bin/*sh > ~/shells
+[user@lx-15-9 ~]$ cat shells 
+/bin/bash
+/bin/brltty-config.sh
+/bin/brltty-prologue.sh
+/bin/chsh
+/bin/dockerd-rootless-setuptool.sh
+/bin/dockerd-rootless.sh
+/bin/gettext.sh
+/bin/gvmap.sh
+/bin/hash
+/bin/instmodsh
+/bin/ksh
+/bin/lchsh
+/bin/lesspipe.sh
+/bin/pax11publish
+/bin/python-argcomplete-tcsh
+/bin/rescan-scsi-bus.sh
+/bin/rksh
+/bin/setup-nsssysinit.sh
+/bin/sh
+/bin/source-highlight-esc.sh
+/bin/src-hilite-lesspipe.sh
+/bin/ssh
+/bin/stapsh
+/bin/tclsh
+/bin/tpm2_hash
+/bin/tpm2_policycphash
+/bin/tpm2_policynamehash
+/bin/virsh
+/bin/vmware-license-check.sh
+/bin/vmware-license-enter.sh
+/bin/wish
+/bin/zsh
+```
+
+À l’aide de la commande touch, créez les fichiers suivants un par un:
+* \*  
+touch \\*
+
+* un fichier  
+touch un\ fichier
+
+* []  
+touch []
+
+* -f
+touch /home/user/-f  
+ou touch ./-f
+
+* Supprimez les un par un:
+
+rm '*' 
