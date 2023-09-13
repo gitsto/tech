@@ -1,9 +1,25 @@
 # Notes sur la formation
 
-## Intro
-### Evaluation
+## Formateur
+
+* [Yves Rougy](https://rougy.net/)
+* [mail](yves@rougy.net)
+* [YouTube](https://www.youtube.com/@yrougy)
+
+### références/livre recommandés
+* de O'Reilly : Google : "index+of" unix power tools pdf
+* https://www.baeldung.com/linux/bash-single-vs-double-brackets
+* chatgpt: y faire des recherches génériques, pas de copier coller d'algo ou d'info relatives à la vie privée ou pro...
+* https://explainshell.com/
+* https://crontab.guru/
+* http://www.cronmaker.com/
+* https://regex101.com/
+
+### Orsys - Evaluation
 https://eval.orsys.fr/
 4K24R4w8a
+
+## Intro
 
 ## Historique
 ### Normes
@@ -12,6 +28,7 @@ POSIX pour poser des bases communes entre les differents shell (csh, sh, ksh, ..
 ksh88 est le point de départ de POSIX au niveau des fonctionnalités
 
 ### Execution
+
 #### Redirection
 < est une redirection
 
@@ -292,8 +309,134 @@ touch []
 
 * -f
 touch /home/user/-f  
-ou touch ./-f
+ou touch ./-f  
+ou touch -- -f avec le -- qui est une option spéciale de plusieurs primitives de shell qui indique qu'on ignore l'interpretation du - comme un prefix d'une option
 
 * Supprimez les un par un:
 
 rm '*' 
+
+## Redirections
+
+le metacaractère > fichier signifique que la sortie standart (stdout ou '1') (implicite) est redirigée vers un fichier
+
+exemple pour écraser un fichier  
+\> fichier
+
+on peut faire  
+ls > fichier pour écrire dans le fichier ce qui aurait dû aller en stdout. Sans les couleurs venant du terminal
+
+ls >> fichier
+
+/!\ on traite les metacaractères avant d'executer la commande
+
+cat < passwd > passwd  
+cat passwd      <<< vidé ! car on a traité les < puis > AVANT d'executer la commande  cat
+
+/dev/null est un périphérique qui ne fait on peut souvent utiliser pour rediriger la sortie stderr dessus pour ne pas polluer ce qui est affiché au terminal 
+
+
+## Variables
+
+les variables globales n'existent pas dans les shell
+
+une variable d'environnement est transmise à un processus fils par COPIE
+
+
+
+## connaitre les commandes disponibles dans le system
+
+```shell
+su
+root    # c'est le mdp
+
+mandb -c  #
+
+# revenir en user normal, CTRL+D
+
+apropos userid   # le paramettre permet de chercher le terme present dans la description de la commande à retrouver
+cuserid (3)          - get username
+whoami (1)           - print effective userid
+
+#ou bien aussi
+
+man cd
+
+NAME
+       bash,  :,  ., [, alias, bg, bind, break, builtin, caller, cd, command, compgen, complete, compopt, continue,
+       declare, dirs, disown, echo, enable, eval, exec, exit, export, false, fc, fg, getopts, hash, help,  history,
+       jobs,  kill,  let,  local,  logout,  mapfile,  popd, printf, pushd, pwd, read, readonly, return, set, shift,
+       shopt, source, suspend, test, times, trap, true, type, typeset, ulimit, umask, unalias, unset, wait  -  bash
+       built-in commands, see bash(1)
+
+
+<https://www.geeksforgeeks.org/list-all-available-commands-and-aliases-in-linux/>
+
+```
+
+jobs
+
+
+## SCRIPTS
+
+### portabilité d'un script
+
+l'utilisation de la 1ère ligne dans un fichier
+
+> #!/usr/bin/env bash  
+
+est plus recommandé que le classique quand on ne sait pas sur quelle machine sera executé
+
+> #!/bin/bash
+
+les test condition avec if [] sont des standard posix, les if [[ ]] sont des évolutions côtés bash et ksh
+
+
+### verifier un script, outil shellcheck
+
+[ShellCheck](https://www.shellcheck.net/) existe en outil ligne de commande pour vérifier les potentielles erreurs le script shell.
+
+
+avec un read on peut rajouter une variable bidon pour filtrer les parametres ajoutés derrière pour 'protéger' la saisi. Exemple d'application pour un oui/non
+
+```shell
+read reponse junk
+```
+reponse pourra tester oui ou non, mais si un utilisateur écrit oui je suis d'accord.... junk sera là pour récupérer le rest non utile...
+
+`case`
+
+utilise des motifs (patterns) pas de regex 
+
+
+## Robustesse
+
+pour éviter les problèmes, toujours utiliser les guillements autour des valeurs de variables
+
+echo "$2"
+expr "$num" "$oper" "$num2"
+
+`IFS` = internal field separator, par défaut c'est espace mais on peut le modifier
+
+dans un programme sensible pour éviter de se faire embéter utiliser un unset IFS pour être sur de vider la valeur qu'un petit malin aurait setté avant en var d'env
+
+
+## Expression regulières
+
+on les utilisent partout sans le savoir
+
+dans un mail les spam passent par des filtres
+
+grep (re = regular expression) inplementent les 'BREG' = basic regular exprerssion
+egrep Egrep 'e' pour EREG = enhanced regular expression
+
+### Divers
+
+`mktemp` commande qui créer un fichier temporaire avec un nom aléatoire
+
+`cron`  
+fourni avec un environnement minimaliste, il nous pose des pbs exemple son PATH ne contient pas tout les répartoire habituels qu'on a utilisé pour dev le script.
+
+Alors on peut faire un source du dossier manquant pour avoir les binaires chargés /usr/local/bin
+ou bien (moins pratique) écrire tout les chemins des binaires qui ne sont pas connu par le PATH par défaut du cron...
+
