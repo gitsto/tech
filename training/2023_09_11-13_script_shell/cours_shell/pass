@@ -1,0 +1,17 @@
+#!/bin/bash
+
+UNLOCK=""
+
+while [ "$UNLOCK" != "1" ]
+do
+	echo -n "Entrez le mot de passe: "
+	read -s MDP
+	echo
+	if [ "$MDP" == "secret" ]
+	then 
+		UNLOCK=1
+	fi
+done
+
+echo le script est déverrouillé
+echo ...

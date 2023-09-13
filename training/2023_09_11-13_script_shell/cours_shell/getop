@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+while getopts rx:isp:ljnf option
+do
+	case $option in
+		r) echo bonjour Roger ;;
+		i) echo bonjour Isabelle ;;
+		s) echo bonjour Stefan ;;
+		l) echo salut Loïc ;;
+		p) echo bonjour "$OPTARG" ;;
+		x) echo XbonjourX "$OPTARG" ;;
+		j) echo coucou Jean ;;
+		n) echo hello Nimes ;;
+		f) echo hey Franck ;;
+	esac
+done
+
+echo on a traité les options
+

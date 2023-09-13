@@ -1,0 +1,48 @@
+#!/bin/bash
+
+commandes1()
+{
+echo on fait les cmd1
+}
+
+commandes2()
+{
+	echo on fait cmd2
+}
+
+commandes3()
+{
+	echo on fait cmd3
+}
+V=yves
+echo V="$V"
+case $V in
+	[yY]ves) commandes1;; 
+	*sh) commandes2 ;;
+	*) commandes3 ;;
+esac
+
+V=Yves
+echo V="$V"
+case $V in
+	[yY]ves) commandes1;; 
+	*sh) commandes2 ;;
+	*) commandes3 ;;
+esac
+
+V=bash
+echo V="$V"
+case $V in
+	[yY]ves) commandes1;; 
+	*sh) commandes2 ;;
+	*) commandes3 ;;
+esac
+
+V=autre
+echo V="$V"
+case $V in
+	[yY]ves) commandes1;; 
+	*sh) commandes2 ;;
+	*) commandes3 ;;
+esac
+

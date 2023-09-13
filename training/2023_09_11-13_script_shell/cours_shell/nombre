@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Entre un nombre"
+read A
+
+if expr "$A" + 1 > /dev/null 2>&1 ; echo coucou
+then
+	echo $A est un nombre
+else
+	echo $A " n'est pas un nombre"
+fi
+

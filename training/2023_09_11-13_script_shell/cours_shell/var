@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Quel est ton prénom ?"
+read PRENOM
+
+if [ "$PRENOM" == "Yves" ]
+then
+	echo "Ah bonjour monsieur le formateur"
+else
+	echo "Bonjour $PRENOM"
+fi
+

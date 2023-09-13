@@ -1,0 +1,18 @@
+#!/usr/bin/env ksh
+
+let LIMIT=50
+
+function debugprint {
+    (( LIMIT > 50 )) &&  {
+        printf "   >>> Line No: %d\n" ${.sh.lineno}
+        printf "   >>> Level: %d\n" "${.sh.level}"
+        printf "   >>> Command: %s\n" "${.sh.command}"
+        printf "   >>> Notice: LIMIT > 50\n"
+    }
+}
+
+trap debugprint DEBUG
+
+printf "Value of LIMIT variable is %d\n"  $LIMIT
+(( LIMIT += 30 ))
+printf "Value of LIMIT variable is %d\n"  $LIMIT

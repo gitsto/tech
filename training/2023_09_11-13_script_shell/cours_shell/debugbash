@@ -1,0 +1,7 @@
+#!/bin/bash
+trap 'echo debug : variable=$variable' DEBUG
+variable=1
+while [ $variable -lt 5 ]
+do
+    variable=$(( $variable + 1 ))
+done
