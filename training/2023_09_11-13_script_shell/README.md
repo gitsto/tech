@@ -8,6 +8,7 @@
 
 ### références/livre recommandés
 * de O'Reilly : Google : "index+of" unix power tools pdf
+* https://docstore.mik.ua/orelly/unix/upt/index.htm
 * https://www.baeldung.com/linux/bash-single-vs-double-brackets
 * chatgpt: y faire des recherches génériques, pas de copier coller d'algo ou d'info relatives à la vie privée ou pro...
 * https://explainshell.com/
