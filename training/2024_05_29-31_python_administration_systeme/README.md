@@ -12,6 +12,10 @@
 * [Python Tutor](https://pythontutor.com) : executer et analyser du code en ligne
 * [Docs Python3 - Data Model](https://docs.python.org/3/reference/datamodel.html#special-method-names)
 * [Py format](https://pyformat.info/)
+* [Docs Python3 - Collections](https://docs.python.org/3/library/collections.abc.html#module-collections.abc)
+* [Docs Python3 - Fonctions natives](https://docs.python.org/fr/3/library/functions.html)
+* [Docs Python3 - Exceptions](https://docs.python.org/3/library/exceptions.html#exception-hierarchy)
+* [Mypy (is an optional) static type checker for Python](https://www.mypy-lang.org/)
 
 ## Exos
 
@@ -28,6 +32,8 @@ Sur Google Colab, les TPs exercices à faire:
 * [Fichiers](https://colab.research.google.com/drive/13HqNbsHOHdmN-o6W07D-AQRy3UgiRODN#forceEdit=true&sandboxMode=true&scrollTo=wp9QBijGXn2c)
 
 * [Fonctions](https://colab.research.google.com/drive/1tWtvW_I1YMzqXbw8CLb3rB85qnQWrskx#forceEdit=true&sandboxMode=true)
+
+* [Generateurs](https://colab.research.google.com/drive/12xhlfIvxSvTt2BhO8IZe5rlmAZ0c6_jk#forceEdit=true&sandboxMode=true&scrollTo=36rRdWXVkzxe)
 
 ### A VOIR / Qeustions ?
 
@@ -94,4 +100,57 @@ with open("wiki_movie_plots_deduped.csv", encoding="utf8", newline="") as fh:
 
 # /!\ utiliser le mode='w' ecriture de fichier, ecrase le fichier en le vidant, attention 
 
+
+# utilisation d'assert est très pratique pour valider un comportement
+
+# brin_adn = ["A","C","G","T","T","A","G","C","T","A","A","C","G"]
+from collections.abc import Iterable, MutableSequence
+
+def seq_comp(brin: list[str]) -> list[str]:
+  traduction = dict(A='T',T='A', C='G', G='C')
+  return [traduction[base] for base in brin]
+
+assert seq_comp(brin=["A","T"]) == ['T', 'A']
+
+# test d'appartenance: les 'set' sont plus performants que les 'list' car dedans les valeurs sont unique, et aussi par contre non ordonnées. Attention à l'utilisation
+
+# utiliser 'raise:' quand on code une librairie, une API, etc pour donner au code client la résponsabilité de traiter lexception dans un try except
+
+
+>>> # 'sous le capot' en python dans une boucle for, un iterateur est créé pour boucler sur l'objet de la boucle
+= iter([1,2,3])
+next(it)
+next(it)
+next(it)
+next(it>>> for item in [1,2,3]:
+...     print(item)
+... 
+)
+1
+2
+3
+>>> it = iter([1,2,3])
+>>> next(it)
+1
+>>> next(it)
+2
+>>> next(it)
+3
+>>> next(it)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+# donc on peut faire une boucle 'while' pour réécrire 'for'
+while True:
+    try:
+        item = next(it)
+        print(item)
+    except StopIteration:
+        break
+
 ```
+
+## Conclusion
+
+Hello la formation Python est top jusque là, même pendant le j1 sur les bases, j'ai (ré)appris des trucs surtout avec des explications pertinentes ainsi que quelques outils d'analyse de code, bonnes pratique pour rendre le code plus maintenable
