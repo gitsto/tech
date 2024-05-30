@@ -19,13 +19,13 @@
 
 ## Exos
 
-Sur Google Colab, les TPs exercices à faire:
+>Sur [Google Colab](https://colab.research.google.com/), les TPs/exercices à faire:
 
 * [Affichage](https://colab.research.google.com/drive/13L1KChRhH-MbWM2Wg2QDC7FoFSp2j9cv#forceEdit=true&sandboxMode=true&scrollTo=RQFAZCXlRFH9)
 
 * [Collections](https://colab.research.google.com/drive/1pWD3qd0tlEqbpYxGoBi-3VxUrk5uLSxD#forceEdit=true&sandboxMode=true)
 
-* [Boucles et comparaisons.ipynb](https://colab.research.google.com/drive/1W0twH5aq2UFgoLIJNS9sx8LsIQBW-1pP#forceEdit=true&sandboxMode=true&scrollTo=wCicBNyFCnxd)
+* [Boucles et comparaisons](https://colab.research.google.com/drive/1W0twH5aq2UFgoLIJNS9sx8LsIQBW-1pP#forceEdit=true&sandboxMode=true&scrollTo=wCicBNyFCnxd)
 
 * [Tests](https://colab.research.google.com/drive/1hBCYVCcNbBchddbAWVyRC38M2Pv0lVfM#forceEdit=true&sandboxMode=true&scrollTo=OLby1mWPrPy8)
 
@@ -34,6 +34,8 @@ Sur Google Colab, les TPs exercices à faire:
 * [Fonctions](https://colab.research.google.com/drive/1tWtvW_I1YMzqXbw8CLb3rB85qnQWrskx#forceEdit=true&sandboxMode=true)
 
 * [Generateurs](https://colab.research.google.com/drive/12xhlfIvxSvTt2BhO8IZe5rlmAZ0c6_jk#forceEdit=true&sandboxMode=true&scrollTo=36rRdWXVkzxe)
+
+* [Programmation orientée objet](https://colab.research.google.com/drive/1Tgp3kRsElRsRM2237hxAbRnV-Dy_-8G_#forceEdit=true&sandboxMode=true&scrollTo=NN1fv0CJLAGg)
 
 ### A VOIR / Qeustions ?
 
@@ -148,6 +150,11 @@ while True:
         print(item)
     except StopIteration:
         break
+
+
+# le !r est utiles pour des type 'str' pour conserver les caractères d'echapement
+
+# attribut de classe sont des niz à bug, car en python on peut rajouter à chaud des attribut de classe et des fonctions
 
 ```
 
