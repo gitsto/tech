@@ -11,10 +11,13 @@
 
 Officiel Python  | Autres
 ---------|----------
- [Data Model](https://docs.python.org/3/reference/datamodel.html#special-method-names) | [Python Tutor](https://pythontutor.com) : executer et analyser du code en ligne
- [Collections](https://docs.python.org/3/library/collections.abc.html#module-collections.abc) | [Py format](https://pyformat.info/)
- [Fonctions natives](https://docs.python.org/fr/3/library/functions.html) | [RegexOne](https://regexone.com/): tutoriel en ligne pour apprendre les regex
- [Exceptions](https://docs.python.org/3/library/exceptions.html#exception-hierarchy) | [Mypy (is an optional) static type checker for Python](https://www.mypy-lang.org/)
+[Data Model](https://docs.python.org/3/reference/datamodel.html#special-method-names) | [Python Tutor](https://pythontutor.com) : executer et analyser du code en ligne
+[Collections](https://docs.python.org/3/library/collections.abc.html#module-collections.abc) | [Py format](https://pyformat.info/)
+[Fonctions natives](https://docs.python.org/fr/3/library/functions.html) | [RegexOne](https://regexone.com/): tutoriel en ligne pour apprendre les regex
+[Exceptions](https://docs.python.org/3/library/exceptions.html#exception-hierarchy) | [Mypy (is an optional) static type checker for Python](https://www.mypy-lang.org/)
+[pathlib utiliser en priorité avant 'os'](https://docs.python.org/3/library/pathlib.html) | [AIOHttp](https://docs.aiohttp.org)
+[shutils](https://docs.python.org/3/library/shutil.html) | [sqlalchemy](https://www.sqlalchemy.org/): pour les bdd
+__ | [Fabric](https://www.fabfile.org/): 'ssh' simplifié, on peut préférer ansible...
 
 ## Exos
 
@@ -22,11 +25,12 @@ Officiel Python  | Autres
 
 [Affichage](https://colab.research.google.com/drive/13L1KChRhH-MbWM2Wg2QDC7FoFSp2j9cv#forceEdit=true&sandboxMode=true&scrollTo=RQFAZCXlRFH9) | [Collections](https://colab.research.google.com/drive/1pWD3qd0tlEqbpYxGoBi-3VxUrk5uLSxD#forceEdit=true&sandboxMode=true) | [Boucles et comparaisons](https://colab.research.google.com/drive/1W0twH5aq2UFgoLIJNS9sx8LsIQBW-1pP#forceEdit=true&sandboxMode=true&scrollTo=wCicBNyFCnxd) | [Tests](https://colab.research.google.com/drive/1hBCYVCcNbBchddbAWVyRC38M2Pv0lVfM#forceEdit=true&sandboxMode=true&scrollTo=OLby1mWPrPy8) | [Fichiers](https://colab.research.google.com/drive/13HqNbsHOHdmN-o6W07D-AQRy3UgiRODN#forceEdit=true&sandboxMode=true&scrollTo=wp9QBijGXn2c)
 | [Fonctions](https://colab.research.google.com/drive/1tWtvW_I1YMzqXbw8CLb3rB85qnQWrskx#forceEdit=true&sandboxMode=true) | [Generateurs](https://colab.research.google.com/drive/12xhlfIvxSvTt2BhO8IZe5rlmAZ0c6_jk#forceEdit=true&sandboxMode=true&scrollTo=36rRdWXVkzxe) | [Programmation orientée objet](https://colab.research.google.com/drive/1Tgp3kRsElRsRM2237hxAbRnV-Dy_-8G_#forceEdit=true&sandboxMode=true&scrollTo=NN1fv0CJLAGg) | [Module re](https://colab.research.google.com/drive/1byfqmU5aVhs4Nc9bbWlvg-SdysBmkif9#forceEdit=true&sandboxMode=true&scrollTo=J81pz4GFeTHu)
-| [Création ILC (ou CLI)](https://colab.research.google.com/drive/1P2MC6W-IMZY_QxPhPl_mU3f1CrzvPWv2#forceEdit=true&sandboxMode=true&scrollTo=hu-M5Il3duX2)
+| [Création ILC (ou CLI)](https://colab.research.google.com/drive/1P2MC6W-IMZY_QxPhPl_mU3f1CrzvPWv2#forceEdit=true&sandboxMode=true&scrollTo=hu-M5Il3duX2) | [Prise en main de SQLAlchemy](https://colab.research.google.com/drive/1WSRZOLhPTlhBkHdhXSEG9WFhmKxgFI3v#forceEdit=true&sandboxMode=true) | [Fonctionnalités d'administration système](https://colab.research.google.com/drive/1X_9tqwVk6Fmm5Pe41jx1IHqRuZT-tdEr#forceEdit=true&sandboxMode=true) | [NumPy](https://colab.research.google.com/drive/1SzkmTDbPkMgYxGgN518j0IjjQHbsF78K#forceEdit=true&sandboxMode=true&scrollTo=mIqMi4KmGiVj)
 
-### A VOIR / Qeustions ?
+### Questions diverses
 
-* github code spaces : conteneur avec vs code configuré python ==> Très intéressant pour diffuser un environnement de travail dans une équipe
+* github codespaces : conteneur avec vs code configuré python ==> Très intéressant pour diffuser un environnement de travail dans une équipe
+exemple de fichier de configuration [devcontainer.json](https://github.com/mlambda/tp-ghcli/blob/step-8/.devcontainer/devcontainer.json)
 
 * les extension utilisé par Hugo dans son VS Code pour le formattage, l'analyse des types
 utiliser le lien codespace avec un vs code déjà configuré par Hugo
@@ -38,10 +42,10 @@ Sinon il y a aussi ce lien vers le [VS Code configuré](https://zany-space-compu
 ### Les bases de l'administration système
 
 * Analyser des logs avec les expressions régulières : module re, pathlib, 
-* Utiliser une base de données relationnelle.
-* Exécuter des commandes système.
-* Manipuler et analyser des fichiers CSV/Excel avec Pandas.
-* Passer des paramètres à un script avec argparse.
+* Utiliser une base de données relationnelle. [SQLAlchemy](https://docs.sqlalchemy.org/) mapping de BDD, [Alembic](https://pypi.org/project/alembic/) gestion de BDD
+* Exécuter des commandes système. Vu
+* Manipuler et analyser des fichiers CSV/Excel avec Pandas. Vu avec Numpy
+* Passer des paramètres à un script avec argparse. Non vu, mais je connaissais
 
 #### Travaux pratiques
 
@@ -185,6 +189,25 @@ list(pathlib.rglob(fichier.log*))
 # methode python pour concatener des strings, 'join' 
 "".join(chaine)...
 
+# astuce avec le triple double quote pour afficher un bloc de text et eviter de gerer les simple et double quote, ...
+print("""
+Hello
+World 'simple quote' "double quotes"
+!
+""")
+
+# output
+Hello
+World 'simple quote' "double quotes"
+!
+
+# compter le nombre de fichier (pas de dossier) dans /etc
+# rglob va reccursivement chercher tout les elements
+# astuce f.is_file()) renvoi True et un bool est un sous ensemble de int, donc 1, ça permet de faire un raccourci
+import pathlib
+sum(f.is_file() for f in pathlib.Path("/etc").rglob("*"))
+# sinon en plus long
+sum(1 for f in pathlib.Path("/etc").rglob("*") if f.is_file())
 
 ```
 
@@ -222,7 +245,6 @@ urllib3==2.2.1
 # 
 ().venv) sto@STOJISAS-5420B:~/sndbx$ pip freeze > frozen-requirements.txt
 
-
 ```
 
 ### Poetry sudo apt install python3-poetry
@@ -236,6 +258,33 @@ il créer automatiquement le venv du projet la structure du dossier, source et t
 ```bash
 # faire cette commande pour installer le package de dossier source du projet afin qu'il soit importable dans les module.py des dossier tests unitaires 
 poetry install
+```
+
+### dev un module ansible
+
+[Guide de developement](https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html)
+
+### Analyse de logs et panda
+
+```python
+
+# extrait de la solution disponible plus tard ici: https://github.com/m09/tp-nginx
+from pathlib import Path
+from datetime import datetime
+import re
+
+def parse_log(path: Path) -> list[tuple[str, datetime, str]]:
+  parsed = []
+  with path.open(encoding='utf-8') as fh:
+    for line, _ in zip(fh, range(10)):
+      result = re.match(pattern="(.*) - - \[(.*?)\] (.*)", string=line)
+      ip, date, message = result.groups()
+      print(ip, date, message)
+      if result:
+        parsed.append(...)
+      
+parse_log(Path("/content/access-small.log"))
+
 ```
 
 ## Conclusion
