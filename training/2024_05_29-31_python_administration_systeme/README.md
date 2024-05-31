@@ -16,6 +16,7 @@
 * [Docs Python3 - Fonctions natives](https://docs.python.org/fr/3/library/functions.html)
 * [Docs Python3 - Exceptions](https://docs.python.org/3/library/exceptions.html#exception-hierarchy)
 * [Mypy (is an optional) static type checker for Python](https://www.mypy-lang.org/)
+* [RegexOne](https://regexone.com/): tutoriel en ligne pour apprendre les regex
 
 ## Exos
 
@@ -37,27 +38,38 @@
 
 * [Programmation orientée objet](https://colab.research.google.com/drive/1Tgp3kRsElRsRM2237hxAbRnV-Dy_-8G_#forceEdit=true&sandboxMode=true&scrollTo=NN1fv0CJLAGg)
 
+* [Module re](https://colab.research.google.com/drive/1byfqmU5aVhs4Nc9bbWlvg-SdysBmkif9#forceEdit=true&sandboxMode=true&scrollTo=J81pz4GFeTHu)
+
+* [Création ILC (ou CLI)](https://colab.research.google.com/drive/1P2MC6W-IMZY_QxPhPl_mU3f1CrzvPWv2#forceEdit=true&sandboxMode=true&scrollTo=hu-M5Il3duX2)
+
 ### A VOIR / Qeustions ?
 
 * github code spaces : conteneur avec vs code configuré python ==> Très intéressant pour diffuser un environnement de travail dans une équipe
 
 * les extension utilisé par Hugo dans son VS Code pour le formattage, l'analyse des types
+utiliser le lien codespace avec un vs code déjà configuré par Hugo
+page 186 du support de cours qui renvoi vers un TP avec un bouton `CodeSpace`
+Sinon il y a aussi ce lien vers le [VS Code configuré](https://zany-space-computing-machine-gr5779jjg7jhx67.github.dev/). Utiliser @installed dans les extension pour avoir la liste
 
 * le contenu de la formation qui m'intéressait au départ ...
 
-Les bases de l'administration système
-Analyser des logs avec les expressions régulières.
-Manipuler et analyser des fichiers CSV/Excel avec Pandas.
-Passer des paramètres à un script avec argparse.
-Utiliser une base de données relationnelle.
-Exécuter des commandes système.
-Travaux pratiques
+### Les bases de l'administration système
+
+* Analyser des logs avec les expressions régulières : module re, pathlib, 
+* Utiliser une base de données relationnelle.
+* Exécuter des commandes système.
+* Manipuler et analyser des fichiers CSV/Excel avec Pandas.
+* Passer des paramètres à un script avec argparse.
+
+#### Travaux pratiques
+
 Recherche d'intrusions/erreurs dans un fichier de logs. Insertion de fichiers CSV dans une base de données relationnelle. Géolocaliser les adresses IP. Créer une archive tar/zip.
 
-Compléments d'administration système
-Se connecter à une API web avec requests et télécharger le contenu de pages HTML avec scrapy.
+#### Compléments d'administration système
+
+* Se connecter à une API web avec requests et télécharger le contenu de pages HTML avec scrapy.
 Envoyer des emails.
-Administrer plusieurs machines avec fabric et ansible.
+* Administrer plusieurs machines avec fabric et ansible.
 
 ### Divers, bonnes pratiques etc
 
@@ -156,6 +168,92 @@ while True:
 
 # attribut de classe sont des niz à bug, car en python on peut rajouter à chaud des attribut de classe et des fonctions
 
+
+# le 'r' signifie raw et parmet de conserver les \, et donc éviter les interprétation de python de la string
+# application avec par exemple les chemin de fichiers windows, mais aussi pour les expression regulisere module 're' de python
+>>> print(r'a\nb')
+a\nb
+>>> print('a\\nb')
+a\nb
+
+
+# re.VERBOSE permet de rajouter des commentaires sur une regexp et de l'écrire en plusieurs lignes pour faciliter sa compréhension
+
+# Without Using VERBOSE 
+regex_email = re.compile(r'^([a-z0-9_\.-]+)@([0-9a-z\.-]+)\.([a-z\.]{2, 6})$', re.IGNORECASE) 
+
+# Using VERBOSE 
+regex_email = re.compile(r""" 
+			^([a-z0-9_\.-]+)		# local Part 
+			@						# single @ sign 
+			([0-9a-z\.-]+)			# Domain name 
+			\.						# single Dot . 
+			([a-z]{2,6})$			# Top level Domain 
+			""",re.VERBOSE | re.IGNORECASE) 
+
+
+# Commande help de python affiche la doc, cela marches sur un object, un fonction
+# pratique pour avoir l'info tout de suite, sans internet et sur la version installée
+>>> help(sorted)
+
+# import pathlib
+# fonction interessante pour parcourir recurssivement des fchiers de logs, par exemple qui ont été rotationnés
+list(pathlib.rglob(fichier.log*))
+
+# methode python pour concatener des strings, 'join' 
+"".join(chaine)...
+
+
+```
+
+## gestion de projet et virtual env (venv)
+
+```shell
+to@STOJISAS-5420B:~$ cd sndbx/
+sto@STOJISAS-5420B:~/sndbx$ python -m venv .venv
+sto@STOJISAS-5420B:~/sndbx$ source .venv/bin/activate
+(.venv) sto@STOJISAS-5420B:~/sndbx$ pip install requests
+Collecting requests
+  Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 KB 2.8 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.7-py3-none-any.whl (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 KB 4.3 MB/s eta 0:00:00
+Collecting certifi>=2017.4.17
+  Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.8/163.8 KB 7.1 MB/s eta 0:00:00
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.1/142.1 KB 8.4 MB/s eta 0:00:00
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.2.1-py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.1/121.1 KB 4.7 MB/s eta 0:00:00
+Installing collected packages: urllib3, idna, charset-normalizer, certifi, requests
+Successfully installed certifi-2024.2.2 charset-normalizer-3.3.2 idna-3.7 requests-2.32.3 urllib3-2.2.1
+(.venv) sto@STOJISAS-5420B:~/sndbx$ pip freeze
+certifi==2024.2.2
+charset-normalizer==3.3.2
+idna==3.7
+requests==2.32.3
+urllib3==2.2.1
+
+# 
+().venv) sto@STOJISAS-5420B:~/sndbx$ pip freeze > frozen-requirements.txt
+
+
+```
+
+### Poetry sudo apt install python3-poetry
+
+>sudo apt install python3-poetry
+
+le package poetry (python 3) simplifie et voir 'remplace' pip
+il permet de fournir un fichier avec les dépendances, de générer le requirements.txt, et autres
+il créer automatiquement le venv du projet la structure du dossier, source et tests et le pyproject.toml
+
+```bash
+# faire cette commande pour installer le package de dossier source du projet afin qu'il soit importable dans les module.py des dossier tests unitaires 
+poetry install
 ```
 
 ## Conclusion
