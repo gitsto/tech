@@ -289,4 +289,5 @@ parse_log(Path("/content/access-small.log"))
 
 ## Conclusion
 
-Hello la formation Python est top jusque là, même pendant le j1 sur les bases, j'ai (ré)appris des trucs surtout avec des explications pertinentes ainsi que quelques outils d'analyse de code, bonnes pratique pour rendre le code plus maintenable
+Formation top, même pendant le j1 sur les bases, j'ai (ré)appris des trucs surtout avec des explications pertinentes ainsi que quelques outils d'analyse de code, des bonnes pratique pour rendre le code plus maintenable
+formation plutôt dense, mais on a le temps de faire les exos et on prend le temps de comprendre, le support de cours pdf est riche.
