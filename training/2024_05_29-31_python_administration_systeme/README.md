@@ -9,21 +9,18 @@
 
 ## Références
 
-* [Python Tutor](https://pythontutor.com) : executer et analyser du code en ligne
-* [Docs Python3 - Data Model](https://docs.python.org/3/reference/datamodel.html#special-method-names)
-* [Py format](https://pyformat.info/)
-* [Docs Python3 - Collections](https://docs.python.org/3/library/collections.abc.html#module-collections.abc)
-* [Docs Python3 - Fonctions natives](https://docs.python.org/fr/3/library/functions.html)
-* [Docs Python3 - Exceptions](https://docs.python.org/3/library/exceptions.html#exception-hierarchy)
-* [Mypy (is an optional) static type checker for Python](https://www.mypy-lang.org/)
-* [RegexOne](https://regexone.com/): tutoriel en ligne pour apprendre les regex
+Officiel Python  | Autres
+---------|----------
+ [Data Model](https://docs.python.org/3/reference/datamodel.html#special-method-names) | [Python Tutor](https://pythontutor.com) : executer et analyser du code en ligne
+ [Collections](https://docs.python.org/3/library/collections.abc.html#module-collections.abc) | [Py format](https://pyformat.info/)
+ [Fonctions natives](https://docs.python.org/fr/3/library/functions.html) | [RegexOne](https://regexone.com/): tutoriel en ligne pour apprendre les regex
+ [Exceptions](https://docs.python.org/3/library/exceptions.html#exception-hierarchy) | [Mypy (is an optional) static type checker for Python](https://www.mypy-lang.org/)
 
 ## Exos
 
 >Sur [Google Colab](https://colab.research.google.com/), les TPs/exercices à faire:
 
-[Affichage](https://colab.research.google.com/drive/13L1KChRhH-MbWM2Wg2QDC7FoFSp2j9cv#forceEdit=true&sandboxMode=true&scrollTo=RQFAZCXlRFH9) | 
-| [Collections](https://colab.research.google.com/drive/1pWD3qd0tlEqbpYxGoBi-3VxUrk5uLSxD#forceEdit=true&sandboxMode=true) | [Boucles et comparaisons](https://colab.research.google.com/drive/1W0twH5aq2UFgoLIJNS9sx8LsIQBW-1pP#forceEdit=true&sandboxMode=true&scrollTo=wCicBNyFCnxd) | [Tests](https://colab.research.google.com/drive/1hBCYVCcNbBchddbAWVyRC38M2Pv0lVfM#forceEdit=true&sandboxMode=true&scrollTo=OLby1mWPrPy8) | [Fichiers](https://colab.research.google.com/drive/13HqNbsHOHdmN-o6W07D-AQRy3UgiRODN#forceEdit=true&sandboxMode=true&scrollTo=wp9QBijGXn2c)
+[Affichage](https://colab.research.google.com/drive/13L1KChRhH-MbWM2Wg2QDC7FoFSp2j9cv#forceEdit=true&sandboxMode=true&scrollTo=RQFAZCXlRFH9) | [Collections](https://colab.research.google.com/drive/1pWD3qd0tlEqbpYxGoBi-3VxUrk5uLSxD#forceEdit=true&sandboxMode=true) | [Boucles et comparaisons](https://colab.research.google.com/drive/1W0twH5aq2UFgoLIJNS9sx8LsIQBW-1pP#forceEdit=true&sandboxMode=true&scrollTo=wCicBNyFCnxd) | [Tests](https://colab.research.google.com/drive/1hBCYVCcNbBchddbAWVyRC38M2Pv0lVfM#forceEdit=true&sandboxMode=true&scrollTo=OLby1mWPrPy8) | [Fichiers](https://colab.research.google.com/drive/13HqNbsHOHdmN-o6W07D-AQRy3UgiRODN#forceEdit=true&sandboxMode=true&scrollTo=wp9QBijGXn2c)
 | [Fonctions](https://colab.research.google.com/drive/1tWtvW_I1YMzqXbw8CLb3rB85qnQWrskx#forceEdit=true&sandboxMode=true) | [Generateurs](https://colab.research.google.com/drive/12xhlfIvxSvTt2BhO8IZe5rlmAZ0c6_jk#forceEdit=true&sandboxMode=true&scrollTo=36rRdWXVkzxe) | [Programmation orientée objet](https://colab.research.google.com/drive/1Tgp3kRsElRsRM2237hxAbRnV-Dy_-8G_#forceEdit=true&sandboxMode=true&scrollTo=NN1fv0CJLAGg) | [Module re](https://colab.research.google.com/drive/1byfqmU5aVhs4Nc9bbWlvg-SdysBmkif9#forceEdit=true&sandboxMode=true&scrollTo=J81pz4GFeTHu)
 | [Création ILC (ou CLI)](https://colab.research.google.com/drive/1P2MC6W-IMZY_QxPhPl_mU3f1CrzvPWv2#forceEdit=true&sandboxMode=true&scrollTo=hu-M5Il3duX2)
 
