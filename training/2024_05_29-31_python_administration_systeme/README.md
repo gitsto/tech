@@ -247,7 +247,7 @@ urllib3==2.2.1
 
 ```
 
-### Poetry sudo apt install python3-poetry
+### Poetry: getionnaire de dependances, projet, venv
 
 >sudo apt install python3-poetry
 
