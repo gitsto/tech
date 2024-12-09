@@ -25,6 +25,7 @@ fnm gestionnaire de package codé en rust, disponible sur win, mac et linux, com
 
 #### creation d'un projet
 
+```shell
 sto@STOJISAS-5420B:~/sndbx/formation/exemples$ npx create-vite
 Need to install the following packages:
 create-vite@6.0.1
@@ -51,7 +52,8 @@ Ok to proceed? (y) y
     JavaScript + SWC
     React Router v7 ↗
 
+```
 Note: babeljs outil qui traduit une syntaxe en javascript
 
 
-npm run dev, lance l'app dans un navigateur et surveille les modifications du code pour faire un build à la volée
+`npm run dev`, lance l'app dans un navigateur et surveille les modifications du code pour faire un build à la volée
