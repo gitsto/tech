@@ -1,7 +1,6 @@
 # Notes de formation
 
 [Orsys : Python perfectionnement](https://www.orsys.fr/formation-python-perfectionnement.html)
-node
 
 ## Formateur
 
